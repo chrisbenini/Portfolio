@@ -63,4 +63,3 @@ Projeto desenvolvido como parte da minha apresentação profissional para oportu
 
 **Christopher Benini**  
 🔗 LinkedIn: https://www.linkedin.com/in/christopher-benini-081b7833a/  
-🐙 GitHub: https://github.com/chrisbenini
