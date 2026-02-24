@@ -8,93 +8,59 @@
 <h1 align="center">💼 Christopher Benini - Portfolio</h1>
 
 <p align="center">
-  <img src="preview/Home-Desktop.png" width="800" alt="Preview Desktop">
+  Portfólio profissional desenvolvido para apresentar minhas habilidades em desenvolvimento web, UI moderna e interações.
+</p>
+
+---
+
+## 🖥️ Preview (Desktop)
+
+<p align="center">
+  <img src="preview/Home-Desktop.png" width="900" alt="Preview Desktop">
+</p>
+
+---
+
+## 📱 Responsividade (Mobile)
+
+O site foi desenvolvido com layout responsivo, se adaptando para **Desktop** e **Mobile**, com ajustes específicos de tipografia, espaçamento e posicionamento.
+
+<p align="center">
+  <img src="preview/Home-Mobile.png" width="320" alt="Preview Mobile">
 </p>
 
 ---
 
 ## ✨ Sobre o Projeto
 
-Este é meu portfólio profissional desenvolvido para apresentar minhas habilidades em desenvolvimento web, organização de código e construção de interfaces modernas.
+Este portfólio foi criado para transmitir uma identidade visual tecnológica e moderna, com foco em:
 
-O projeto foi pensado para transmitir:
-
-- Identidade visual tecnológica
-- Interatividade
-- Código estruturado
+- Interatividade e fluidez
+- Organização de layout
 - Responsividade real
-- Experiência fluida
-
-🔗 **Acesse online:** _(coloque aqui seu link da Netlify/Vercel depois)_
+- Experiência visual
 
 ---
 
 ## 🛠 Tecnologias Utilizadas
 
-### 🌐 Front-end
 - HTML5 (estrutura semântica)
-- CSS3 (layout, responsividade, animações)
+- CSS3 (layout, responsividade e animações)
 - JavaScript Vanilla (interações e lógica)
-
-### 🎨 Interface & Experiência
-- Animação Typewriter (efeito de digitação)
-- Gradients dinâmicos
-- Background com Canvas API
-- Sistema de filtro de projetos
-- Modal interativo
-- Layout adaptado para Desktop e Mobile
-- Media Queries customizadas
-
-### 🧠 Conceitos Aplicados
-- Separação de responsabilidades
-- Estrutura modular de arquivos
-- Manipulação de DOM
-- Organização de assets
-- Versionamento com Git
+- Canvas API (background dinâmico)
+- Efeito de digitação (typewriter)
+- Modal + filtros de projetos
 
 ---
 
-## 📱 Responsividade
+## 🎯 Objetivo
 
-O layout foi construído pensando em:
-
-- Desktop
-- Tablets
-- Mobile
-
-Com ajustes específicos de tipografia, espaçamento e posicionamento de elementos para cada breakpoint.
-
----
-
-## 🎯 Funcionalidades Principais
-
-✔ Header com efeito de digitação  
-✔ Hero section com identidade visual forte  
-✔ Fundo animado utilizando Canvas  
-✔ Sistema de filtro de projetos  
-✔ Modal dinâmico para detalhes  
-✔ Estrutura separada para desktop e mobile  
-✔ Código organizado e comentado  
-
----
-
-## 🚀 Objetivo
-
-Este projeto foi desenvolvido como parte da minha apresentação profissional para oportunidades na área de desenvolvimento web.
-
-Ele representa minha evolução técnica e atenção aos detalhes.
+Projeto desenvolvido como parte da minha apresentação profissional para oportunidades na área de desenvolvimento web.
 
 ---
 
 ## 👨‍💻 Autor
 
 **Christopher Benini**  
-Desenvolvedor Front-End  
-
-[LinkedIn](#) • [GitHub](https://github.com/chrisbenini)
-
----
-
-<p align="center">
-  ⚡ Sempre buscando evoluir, construir e aprender.
-</p>
+🔗 LinkedIn: https://www.linkedin.com/in/christopher-benini-081b7833a/  
+🐙 GitHub: https://github.com/chrisbenini
