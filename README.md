@@ -8,7 +8,7 @@
 <h1 align="center">💼 Christopher Benini - Portfolio</h1>
 
 <p align="center">
-  Portfólio profissional desenvolvido para apresentar minhas habilidades em desenvolvimento web, UI moderna e interações.
+  Portfólio profissional desenvolvido para apresentar um pouco de mim e meus pojetos.
 </p>
 
 ---
@@ -55,7 +55,7 @@ Este portfólio foi criado para transmitir uma identidade visual tecnológica e 
 
 ## 🎯 Objetivo
 
-Projeto desenvolvido como parte da minha apresentação profissional para oportunidades na área de desenvolvimento web.
+Projeto desenvolvido como parte da minha apresentação profissional para oportunidades nas áreas apresentadas.
 
 ---
 
