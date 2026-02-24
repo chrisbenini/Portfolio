@@ -11,10 +11,6 @@
   <img src="preview/Home-Desktop.png" width="800" alt="Preview Desktop">
 </p>
 
-<p align="center">
-  <img src="preview/Home-Mobile.png" width="300" alt="Preview Mobile">
-</p>
-
 ---
 
 ## ✨ Sobre o Projeto
