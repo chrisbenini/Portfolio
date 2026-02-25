@@ -1,5 +1,6 @@
 <p align="center">
   <img src="./Portfolio/recursos/Fotos/logo/Logo-c.png" width="200" alt="Logo">
+</p>
 
 <h1 align="center">💼 Christopher Benini - Portfolio</h1>
 
