@@ -1,5 +1,5 @@
 
-  <img src="Portfolio/Portfolio/recursos/Fotos/logo/Logo_c.png" width="900" alt="Preview Desktop">
+  <img src="Portfolio/recursos/Fotos/logo/Logo_c.png" width="900" alt="Preview Desktop">
 </p>
 
 <p align="center">
