@@ -20,7 +20,7 @@
 ## 🖥️ Preview (Desktop)
 
 <p align="center">
-  <img src="./Portfolio/Portfolio/preview/Home-Desktop.png" width="900" alt="Preview Desktop">
+  <img src="Portfolio/preview/Home-Desktop.png" width="900" alt="Preview Desktop">
 </p>
 
 ---
@@ -30,7 +30,7 @@
 O site foi desenvolvido com layout responsivo, se adaptando para **Desktop** e **Mobile**, com ajustes específicos de tipografia, espaçamento e posicionamento.
 
 <p align="center">
-  <img src="Portfolio/Portfolio/preview/Home-Mobile.png" width="320" alt="Preview Mobile">
+  <img src="Portfolio/preview/Home-Mobile.png" width="320" alt="Preview Mobile">
 </p>
 
 ---
