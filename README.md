@@ -1,87 +1,141 @@
 <p align="center">
-  <img src="./Portfolio/recursos/Fotos/logo/Logo-c.png" width="200" alt="Logo">
+  <img src="./Portfolio/recursos/Fotos/logo/Logo-c.png" width="160" alt="Logo">
 </p>
 
-<h1 align="center">💼 Christopher Benini - Portfolio</h1>
+<h1 align="center">Christopher Benini — Portfolio</h1>
 
 <p align="center">
-  Portfólio profissional desenvolvido para apresentar um pouco sobre mim, minhas habilidades e projetos.
+  Interface moderna, responsiva e interativa construída com foco em experiência visual e organização técnica.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/HTML-5-orange?style=for-the-badge&logo=html5">
-  <img src="https://img.shields.io/badge/CSS-3-blue?style=for-the-badge&logo=css3">
-  <img src="https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge&logo=javascript">
-  <img src="https://img.shields.io/badge/Status-Online-success?style=for-the-badge">
+  <img src="https://img.shields.io/badge/HTML5-Semantic-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/CSS3-Responsive-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img src="https://img.shields.io/badge/Canvas-Animated-000000?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Status-Production-00c853?style=for-the-badge">
 </p>
 
 ---
 
-## 🖥️ Preview (Desktop)
+# 🖥 Preview — Desktop
 
 <p align="center">
-  <img src="./Portfolio/preview/Home-Desktop.png" width="750" alt="Preview Desktop">
+  <img src="./Portfolio/preview/Home-Desktop.png" width="900">
 </p>
 
 ---
 
-## 📱 Responsividade (Mobile)
+# 📱 Responsividade — Mobile
 
-O site foi desenvolvido com layout totalmente responsivo, se adaptando para **Desktop** e **Mobile**, com ajustes específicos de tipografia, espaçamento e posicionamento.
+Layout adaptativo com ajustes específicos de:
+
+- Escala tipográfica  
+- Espaçamento  
+- Estrutura de navegação  
+- Experiência visual fluida  
 
 <p align="center">
-  <img src="./Portfolio/preview/Home-Mobile.png" width="320" alt="Preview Mobile">
+  <img src="./Portfolio/preview/Home-Mobile.png" width="320">
 </p>
 
 ---
 
-## ✨ Sobre o Projeto
+# ✨ Visão do Projeto
 
-Este portfólio foi criado para transmitir uma identidade visual tecnológica e moderna, com foco em:
+Este portfólio foi projetado como uma aplicação front-end moderna com foco em:
 
-- Interatividade e fluidez  
-- Organização de layout  
-- Responsividade real  
-- Experiência visual imersiva  
+- Identidade visual tecnológica
+- Performance visual
+- Separação clara de responsabilidades
+- Estrutura modular
+- Experiência imersiva
 
----
-
-## 🛠 Tecnologias Utilizadas
-
-- **HTML5** → Estrutura semântica  
-- **CSS3** → Layout, responsividade e animações  
-- **JavaScript Vanilla** → Interações e lógica  
-- **Canvas API** → Background dinâmico  
-- **Typewriter Effect** → Animação de digitação  
-- **Modal + Filtros** → Exibição de projetos  
+O objetivo foi ir além de um simples “site estático”, criando uma interface dinâmica com microinterações e animações personalizadas.
 
 ---
 
-## 🎯 Objetivo
+# 🏗 Arquitetura
 
-Projeto desenvolvido como parte da minha apresentação profissional.
+Portfolio/
+│
+├── index.html
+├── principal.html
+├── projetos.html
+│
+├── css/
+│   ├── estilos.css
+│   └── estilos-mobile.css
+│
+├── js/
+│   ├── funcoes.js
+│   ├── projetos.js
+│   └── rede-home.js
+│
+└── recursos/
+
+
+### Conceitos aplicados:
+
+- HTML semântico
+- CSS modularizado
+- Breakpoints específicos
+- Manipulação dinâmica do DOM
+- Canvas API para background animado
+- Sistema de filtros + modal dinâmico
+- Efeito typewriter customizado
+- Separação Desktop / Mobile
 
 ---
 
-## 🚀 Acesse o Projeto
+# 🛠 Stack Técnica
+
+### Front-End
+- HTML5
+- CSS3 (Flexbox, Media Queries, Animations)
+- JavaScript ES6
+
+### Interatividade
+- Canvas API
+- DOM manipulation
+- Dynamic content rendering
+- Custom UI effects
+
+### Estrutura
+- Organização modular
+- Separação de responsabilidades
+- Versionamento com Git
+
+---
+
+# 🎯 Decisões Técnicas
+
+✔ Sem frameworks para manter controle total da estrutura  
+✔ Responsividade manual para maior precisão visual  
+✔ Animações leves para preservar performance  
+✔ Estrutura preparada para possível futura migração para framework  
+
+---
+
+# 🚀 Live Preview
 
 <p align="center">
   <a href="https://portfolio-chrisbenini.netlify.app" target="_blank">
-    <img src="https://img.shields.io/badge/Live%20Demo-Visit-00c853?style=for-the-badge">
+    <img src="https://img.shields.io/badge/🔗%20ACESSAR%20PORTFÓLIO-ONLINE-00c853?style=for-the-badge">
   </a>
 </p>
 
 ---
 
-## 👨‍💻 Autor
+# 👨‍💻 Autor
 
-**Christopher Benini**  
+Christopher Benini  
 
-🔗 LinkedIn:  
+LinkedIn:  
 https://www.linkedin.com/in/christopher-benini-081b7833a/
 
 ---
 
 <p align="center">
-  ⭐ Se você gostou do projeto, considere dar um Star no repositório!
+  ⭐ Se você gostou do projeto, considere dar um Star.
 </p>
