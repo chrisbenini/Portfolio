@@ -55,25 +55,26 @@ O objetivo foi ir além de um simples “site estático”, criando uma interfac
 
 ---
 
-# 🏗 Arquitetura
+## 🏗 Arquitetura
 
+```text
 Portfolio/
 │
-├── index.html
-├── principal.html
-├── projetos.html
+├── 📄 index.html
+├── 📄 principal.html
+├── 📄 projetos.html
 │
-├── css/
+├── 🎨 css/
 │   ├── estilos.css
 │   └── estilos-mobile.css
 │
-├── js/
+├── ⚙️ js/
 │   ├── funcoes.js
 │   ├── projetos.js
 │   └── rede-home.js
 │
-└── recursos/
-
+└── 📦 recursos/
+```
 
 ### Conceitos aplicados:
 
