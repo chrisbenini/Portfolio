@@ -1,3 +1,7 @@
+
+  <img src="Portfolio/Portfolio/recursos/Fotos/logo/Logo_c.png" width="900" alt="Preview Desktop">
+</p>
+
 <p align="center">
   <img src="https://img.shields.io/badge/HTML-5-orange?style=for-the-badge&logo=html5">
   <img src="https://img.shields.io/badge/CSS-3-blue?style=for-the-badge&logo=css3">
@@ -16,7 +20,7 @@
 ## 🖥️ Preview (Desktop)
 
 <p align="center">
-  <img src="preview/Home-Desktop.png" width="900" alt="Preview Desktop">
+  <img src="Portfolio/Portfolio/preview/Home-Desktop.png" width="900" alt="Preview Desktop">
 </p>
 
 ---
@@ -26,7 +30,7 @@
 O site foi desenvolvido com layout responsivo, se adaptando para **Desktop** e **Mobile**, com ajustes específicos de tipografia, espaçamento e posicionamento.
 
 <p align="center">
-  <img src="preview/Home-Mobile.png" width="320" alt="Preview Mobile">
+  <img src="Portfolio/Portfolio/preview/Home-Mobile.png" width="320" alt="Preview Mobile">
 </p>
 
 ---
