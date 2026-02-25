@@ -20,7 +20,7 @@
 ## 🖥️ Preview (Desktop)
 
 <p align="center">
-  <img src="Portfolio/Portfolio/preview/Home-Desktop.png" width="900" alt="Preview Desktop">
+  <img src="./Portfolio/Portfolio/preview/Home-Desktop.png" width="900" alt="Preview Desktop">
 </p>
 
 ---
