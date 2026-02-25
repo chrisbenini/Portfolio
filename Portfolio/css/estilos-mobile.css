@@ -1,0 +1,251 @@
+/* responsivo: ajustes por tela */
+@media (max-width: 900px) {html, body {
+    background: linear-gradient(180deg, rgba(7,10,18,1), rgba(11,15,25,1));
+  }
+
+/* estilo geral */
+main, section, header, footer, .container, .hero {
+    background: transparent !important;
+  }
+
+/* topo: barra de navegação */
+.top, .topo {
+    position: sticky;
+  top: 0;
+  z-index: 9998;
+  background: transparent;
+  backdrop-filter: none;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  }
+
+/* estilo geral */
+.nav {
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  max-width: none !important;
+  margin: 0 !important;
+  }
+
+/* nome/logo: estilo e animação */
+.brand, .navBrand {
+    display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  }
+
+/* menu: links e navegação */
+.menuBtn {
+    display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.06);
+  color: rgba(255,255,255,.92);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  position: relative;
+  z-index: 10001; 
+  }
+
+/* estilo geral */
+.navLinks, .menu {
+    display: none !important;
+  }
+
+.navLinks.open, .menu.open {
+  display: flex !important;
+  position: fixed;
+  top: 60px;
+  right: 12px;
+  left: auto;
+  width: min(220px, calc(100vw - 24px));
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(8, 12, 24, 0.92);
+  backdrop-filter: blur(16px);
+  z-index: 10000;
+  box-shadow: 0 20px 45px rgba(0,0,0,.35);
+  }
+
+.navLinks.open a, .menu.open a {
+    display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: rgba(255,255,255,.92);
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
+  }
+
+.talkDrive2, .btnCall, .btn, .btn-outline {
+    overflow: visible !important;
+  }
+
+.talkDrive2__lane {
+    min-width: 120px;
+  }
+
+/* projetos: cards, filtros e modal */
+body.page-projetos .projTop {
+    display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  }
+
+body.page-projetos .projTitleWrap {
+    flex: 1 1 auto;
+  min-width: 0;
+  }
+
+body.page-projetos .projActions {
+    flex: 0 0 auto;
+  }
+
+body.page-projetos .projActions .btnNeo {
+    padding: 10px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+  }
+
+body.page-projetos .projActions .btnNeo span:first-child {
+    display: none;
+  }
+
+body.page-projetos .projActions .btnNeo .btnArrow {
+    font-size: 18px;
+  line-height: 1;
+  }
+
+/* responsivo: ajustes por tela */
+}@media (max-width: 900px){body.page-projetos header.top .container.nav{
+    display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  }
+
+/* topo: barra de navegação */
+body.page-projetos header.top .brand{
+    flex: 1 1 auto;
+  min-width: 0;
+  }
+
+/* menu: links e navegação */
+body.page-projetos header.top #menuBtn{
+    margin-left: auto !important;
+  align-self: center !important;
+  }
+
+/* responsivo: ajustes por tela */
+}@media (max-width: 900px){#bg, #bgNet{
+    position: fixed !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  opacity: .95 !important;
+  }
+
+/* estilo geral */
+body::before{
+    z-index: -1 !important;
+  }
+
+header, main, footer, section{
+    position: relative !important;
+  z-index: 2 !important;
+  }
+
+}.logoFixa{
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  width: 170px;
+  height: auto;
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+/* responsivo: ajustes por tela */
+@media (max-width: 900px){
+
+/* projetos: cards, filtros e modal */
+  body.page-projetos .projTop{
+    display: flex;
+    flex-direction: column-reverse; /* <-- joga o botão pra cima */
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  body.page-projetos .projActions{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  body.page-projetos .projActions .btnNeo{
+    padding: 6px 12px;
+    font-size: .85rem;
+  }
+
+}
+
+/* topo: barra de navegação */
+.topMobile{
+  position: sticky;
+  top: 0;
+  z-index: 20000;
+  padding: 14px 14px 0; /* respiro */
+  background: transparent; /* sem faixa */
+}
+
+.topMobile__inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0;              /* sem “caixa” */
+  border: 0;
+  border-radius: 0;
+  background: transparent;  /* remove o fundo */
+  backdrop-filter: none;    /* remove blur */
+}
+
+.topMobile .brand{
+  font-weight: 800;
+  letter-spacing: .3px;
+  font-size: 1rem;
+  color: rgba(240,245,255,.92);
+}
+
+/* menu mobile: abre/fecha e posicionamento */
+.topMobile .menuBtn{
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+
+  background: rgba(10, 15, 25, .55);
+  border: 1px solid rgba(255,255,255,.10);
+  backdrop-filter: blur(10px);
+
+  display: grid;
+  place-items: center;
+
+  position: relative;
+  z-index: 20001;
+}
