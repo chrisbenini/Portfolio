@@ -1540,14 +1540,20 @@ button.talkDrive2{
 }
 
 .matPanel{
-  padding: 0 16px 16px 16px;
+  padding: 0 16px;              
   display: grid;
   gap: 10px;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
   transform: translateY(-6px);
+  pointer-events: none;         
   transition: max-height .35s ease, opacity .25s ease, transform .25s ease;
+}
+
+.matCard.isOpen .matPanel{
+  padding: 0 16px 16px 16px;   
+  pointer-events: auto;        
 }
 
 .matAction{
