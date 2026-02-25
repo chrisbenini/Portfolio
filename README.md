@@ -59,7 +59,7 @@ Este portfólio foi criado para transmitir uma identidade visual tecnológica e 
 
 ## 🎯 Objetivo
 
-Projeto desenvolvido como parte da minha apresentação profissional, com foco em oportunidades nas áreas de desenvolvimento Front-End e interfaces interativas.
+Projeto desenvolvido como parte da minha apresentação profissional.
 
 ---
 
