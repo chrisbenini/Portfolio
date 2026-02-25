@@ -1,4 +1,5 @@
 
+<p align="center">
   <img src="Portfolio/recursos/Fotos/logo/Logo_c.png" width="230" alt="Preview Desktop">
 </p>
 
