@@ -2,6 +2,16 @@
 
 const PROJETOS = [
   {
+    id: "portfolio",
+    titulo: "Meu Portfolio",
+    categoria: "dev",
+    badge: "Full Stack",
+    desc: "Interface moderna, responsiva e interativa construída com foco em experiência visual e organização técnica.", 
+    stack: ["Html5", "CSS3 ", "JavaScript", "Git"],
+    bullets: ["Identidade visual tecnológica", "Performance visual", "Experiência imersiva"],
+    github: "https://github.com/chrisbenini/Portfolio"
+  },
+  {
     id: "xml-excel",
     titulo: "Conversor XML → Excel",
     categoria: "dev",
@@ -14,7 +24,7 @@ const PROJETOS = [
   {
     id: "tiny-extractor",
     titulo: "Tiny Extractor (API)",
-    categoria: "api",
+    categorias: ["dev", "dados"],
     badge: "Back-end / Dados",
     desc: "Extração de dados via API para análise e integração com rotinas internas.",
     stack: ["API", "Python", "Integração", "Dados", ],
@@ -95,7 +105,11 @@ function cardTemplate(p) {
 function render(filter = "all") {
   const list = filter === "all"
     ? PROJETOS
-    : PROJETOS.filter(p => p.categoria === filter);
+    : PROJETOS.filter(p => {
+
+        const cats = p.categorias ?? (p.categoria ? [p.categoria] : []);
+        return cats.includes(filter);
+      });
 
   grid.innerHTML = list.map(cardTemplate).join("");
   attachCardEffects();
