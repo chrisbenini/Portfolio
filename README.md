@@ -66,7 +66,7 @@ Projeto desenvolvido como parte da minha apresentação profissional.
 ## 🚀 Acesse o Projeto
 
 <p align="center">
-  <a href="COLOQUE_AQUI_O_LINK_DO_SEU_SITE" target="_blank">
+  <a href="[COLOQUE_AQUI_O_LINK_DO_SEU_SITE](https://portfolio-chrisbenini.netlify.app/)" target="_blank">
     <img src="https://img.shields.io/badge/Live%20Demo-Visit-00c853?style=for-the-badge">
   </a>
 </p>
