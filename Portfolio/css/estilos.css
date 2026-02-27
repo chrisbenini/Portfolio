@@ -214,18 +214,6 @@ header, main, footer { position: relative;
   align-items: center;
 }
 
-/* botões: aparência e interação */
-.iconBtn{
-  width: 46px;
-  height: 46px;
-  border-radius: 16px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(255,255,255,.14);
-  background: rgba(255,255,255,.05);
-  transition: .14s ease;
-}
 
 .iconBtn:hover{
   transform: translateY(-2px);
@@ -257,12 +245,6 @@ header, main, footer { position: relative;
   margin-top: 20px;
 }
 
-.footerInner{
-  display:flex;
-  justify-content: space-between;
-  align-items:center;
-  gap: 12px;
-}
 
 .muted{ color: var(--muted); }
 
@@ -271,6 +253,7 @@ header, main, footer { position: relative;
   opacity: .88; }
 
 .aboutTabs,
+
 /* estilo geral */
 .skillsTabs{
   margin-top: 14px;
@@ -547,53 +530,6 @@ button.talkDrive2{
   gap: 10px;
 }
 
-/* botões: aparência e interação */
-.proBtn{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap: 10px;
-  padding: 12px 12px;
-  border-radius: 16px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.04);
-  color: rgba(234,240,255,.92);
-  font-weight: 900;
-  font-size: 13px;
-  transition: .14s ease;
-}
-
-.proBtn:hover{
-  transform: translateY(-1px);
-  background: rgba(255,255,255,.08);
-  border-color: rgba(255,255,255,.22);
-}
-
-/* estilo geral */
-.ico.svg{
-  width: 30px;
-  height: 30px;
-  border-radius: 12px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(124,58,237,.14);
-  border: 1px solid rgba(124,58,237,.28);
-  box-shadow: 0 0 18px rgba(124,58,237,.12);
-}
-
-.ico.svg svg{
-  width: 16px;
-  height: 16px;
-  fill: rgba(234,240,255,.95);
-}
-
-/* botões: aparência e interação */
-.proBtn:hover .ico.svg{
-  background: rgba(124,58,237,.22);
-  border-color: rgba(124,58,237,.40);
-  box-shadow: 0 0 26px rgba(124,58,237,.18);
-}
 
 /* responsivo: ajustes por tela */
 @media (max-width: 900px){.hero h1{ font-size: 36px; }
@@ -622,13 +558,10 @@ button.talkDrive2{
     grid-template-columns: 1fr 1fr;
   }
 
-/* botões: aparência e interação */
-.ctaRow .btn.link{
-    grid-column: 1 / -1;
-  }
 
 /* modal: detalhes do projeto */
-}#resumoModal .modalCardClean{
+}#resumoModal .modalCardClean,
+#materiaisModal .modalCardClean{
   border-radius: 18px;
   border: 1px solid rgba(255,255,255,.10);
   background:
@@ -641,12 +574,14 @@ button.talkDrive2{
   backdrop-filter: blur(18px);
 }
 
-#resumoModal .modalTop{
+#resumoModal .modalTop,
+#materiaisModal .modalTop{
   padding-bottom: 14px;
   border-bottom: 1px solid rgba(255,255,255,.08);
 }
 
-#resumoModal .modalMini{
+#resumoModal .modalMini,
+#materiaisModal .modalMini{
   margin-top: 6px;
   font-size: 13px;
   opacity: .75;
@@ -776,7 +711,7 @@ button.talkDrive2{
   overflow: hidden;
 }
 
-/* botões: aparência e interação */
+/* botões: aparência e interação resumo profissional */
 .accBtn{
   width: 100%;
   border: 0;
@@ -842,11 +777,6 @@ button.talkDrive2{
     0 18px 40px rgba(0,0,0,.35),
     inset 0 1px 0 rgba(255,255,255,.05);
   overflow: hidden;
-}
-
-/* botões: aparência e interação */
-.xpBtn{
-  padding: 18px 18px;
 }
 
 /* estilo geral */
@@ -939,13 +869,6 @@ button.talkDrive2{
   color: rgba(234,240,255,.90);
 }
 
-/* botões: aparência e interação */
-.xpBtn{
-  
-  padding: 14px 16px;
-  gap: 14px;
-}
-
 /* estilo geral */
 .xpLeft{
   gap: 4px; 
@@ -995,12 +918,6 @@ button.talkDrive2{
 
 .xpItem{
   border-radius: 16px;
-}
-
-/* botões: aparência e interação */
-.xpBtn{
-  padding: 12px 14px !important;
-  align-items: center;
 }
 
 /* estilo geral */
@@ -1055,7 +972,7 @@ button.talkDrive2{
   line-height: 1.7 !important;
 }
 
-/* botões: aparência e interação */
+/* === botões e interações: Tela contato da página principal === */
 .iconBtn{
   --c: 124 58 237;
   width: 44px;
@@ -1076,15 +993,7 @@ button.talkDrive2{
   transition: transform .18s ease, border-color .18s ease, background .18s ease, box-shadow .18s ease;
 }
 
-.iconBtn svg{
-  width: 18px;
-  height: 18px;
-  display: block;
-  fill: rgba(250,252,255,.92);
-  opacity: .98;
-  transition: filter .18s ease, opacity .18s ease, transform .18s ease;
-}
-
+/* === Mantém a cor quando passa a seta por cima === */
 .iconBtn:hover{
   transform: translateY(-2px) scale(1.02);
   border-color: rgba(var(--c)/.72);
@@ -1100,37 +1009,14 @@ button.talkDrive2{
     0 0 70px rgba(var(--c)/.18);
 }
 
-.iconBtn:hover svg{
-  transform: translateY(-.5px);
-  filter:
-    drop-shadow(0 0 10px rgba(var(--c)/.65))
-    drop-shadow(0 0 22px rgba(var(--c)/.35));
-}
-
-.iconBtn:focus-visible{
-  outline: none;
-  border-color: rgba(var(--c)/.8);
-  box-shadow:
-    0 26px 55px rgba(0,0,0,.55),
-    0 0 0 3px rgba(var(--c)/.20),
-    0 0 40px rgba(var(--c)/.30);
-}
-
+/* icone email */
 .iconBtn.is-mail{ --c: 99 102 241; }
-
+/* icone whatsapp */
 .iconBtn.is-wpp { --c: 34 197 94; }
-
-.iconBtn.is-in  { --c: 14 165 233; }
-
-.iconBtn.is-gh  { --c: 148 163 184; }
-
+/* icone instagram */
 .iconBtn.is-ig  { --c: 236 72 153; }
 
-.iconBtn svg path{
-  vector-effect: non-scaling-stroke;
-}
-
-/* estilo geral */
+/* estilo geral dos botões*/
 .talkDrive2{
   --c: 0 195 255;
   --p: 124 58 237;
@@ -1198,7 +1084,11 @@ button.talkDrive2{
 100% { transform: translateX(55%);
   opacity: 0; }
 
-}.talkDrive2__icon{
+}
+
+/* === Botão fale comigo designer === */
+/* icone telefone do fale "fale comigo" */
+.talkDrive2__icon{
   width: 36px;
   height: 36px;
   border-radius: 14px;
@@ -1833,7 +1723,7 @@ body.homePage { height: 100vh;
   background: rgba(8,10,18,.35);
   backdrop-filter: blur(10px);
 }
-
+/* Ajusta tamanho do rodapé da página home e projetos*/
 .homeFooter__inner{
   width: min(1100px, 92%);
   margin: 0 auto;
@@ -1842,7 +1732,7 @@ body.homePage { height: 100vh;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
 }
-
+/* Coloca o estilo da letra do rodapé */
 .homeFooter__left{
   justify-self: start;
   color: rgba(234,240,255,.72);
@@ -1850,18 +1740,12 @@ body.homePage { height: 100vh;
   font-size: 13px;
 }
 
+/* Ajusta texto do lado direito do rodapé */
 .homeFooter__right{
   justify-self: end;
   color: rgba(234,240,255,.62);
   font-weight: 700;
   font-size: 13px;
-}
-
-.homeFooter__mid{
-  justify-self: center;
-  display: flex;
-  gap: 34px;
-  align-items: center;
 }
 
 /* estilo geral */
@@ -1908,7 +1792,7 @@ body.homePage { height: 100vh;
 
 }@media (max-width: 900px){.welcomeFlow{ font-size: 20px; }
 
-/* rodapé: layout e links */
+/* rodapé: ajusta as posições de dentro dele */
 }.homeFooter__mid{
   gap: 56px; 
 }
@@ -1939,15 +1823,9 @@ body.homePage { height: 100vh;
   margin-left: 251px; 
 }
 
-/* rodapé: layout e links */
-.homeFooter__mid{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 64px; 
-}
-
-.homeFooter .iconBtn{
+/* === designer dos icones do rodapé das páginas === */
+.homeFooter .iconBtn,
+.footer .iconBtn{
   width: auto !important;
   height: auto !important;
   padding: 0 !important;
@@ -1962,26 +1840,25 @@ body.homePage { height: 100vh;
   transition: transform .16s ease, opacity .16s ease, filter .16s ease;
 }
 
-.homeFooter .iconBtn svg{
-  width: 26px;
-  height: 26px;
-  fill: rgba(250,252,255,.90);
-}
-
-.homeFooter .iconBtn:hover{
+/* Efeitos visuais atrás dos Icones do rodapé*/
+.homeFooter .iconBtn:hover,
+.footer .iconBtn:hover {
   transform: translateY(-2px);
   opacity: 1;
 }
 
-.homeFooter .iconBtn.is-in:hover{
+.homeFooter .iconBtn.is-in:hover,
+.footer .iconBtn.is-in:hover{
   filter: drop-shadow(0 0 10px rgba(14,165,233,.55)) drop-shadow(0 0 18px rgba(14,165,233,.25));
 }
 
-.homeFooter .iconBtn.is-gh:hover{
+.homeFooter .iconBtn.is-gh:hover,
+.footer .iconBtn.is-gh:hover{
   filter: drop-shadow(0 0 10px rgba(148,163,184,.55)) drop-shadow(0 0 18px rgba(148,163,184,.25));
 }
 
-.homeFooter .iconBtn.is-ig:hover{
+.homeFooter .iconBtn.is-ig:hover,
+.footer .iconBtn.is-ig:hover{
   filter: drop-shadow(0 0 10px rgba(236,72,153,.55)) drop-shadow(0 0 18px rgba(236,72,153,.25));
 }
 
@@ -1991,10 +1868,14 @@ body.homePage { height: 100vh;
 .homeFooter .iconBtn svg{ width: 24px;
   height: 24px; }
 
-}.homeFooter,
+}
+
+/* Rodapé projetos */
+.homeFooter,
 .homeFooter__bar,
 .homeFooter__wrap,
-/* rodapé: layout e links */
+
+/* Ajusta posição do rodapé na página Home e projetos */
 .homeFooter__inner{
   background: transparent !important;
   backdrop-filter: none !important;
@@ -2002,16 +1883,7 @@ body.homePage { height: 100vh;
   box-shadow: none !important;
 }
 
-.homeFooter{
-  border-top: 1px solid rgba(255,255,255,.08) !important;
-}
-
-/* estilo geral */
-.homePage{
-  height: 100vh;
-  overflow: hidden;
-}
-
+/* === Estilo da Logo === */
 .logoFixa{
   position: fixed;
   top: 18px;
@@ -2083,7 +1955,7 @@ body.homePage { height: 100vh;
   justify-content: flex-end;
 }
 
-/* botões: aparência e interação */
+/* botões: aparência e interação botão voltar para o portfólio página projetos */
 .btnNeo, .btnGhost{
   display: inline-flex;
   gap: 10px;
@@ -2483,12 +2355,6 @@ body.homePage { height: 100vh;
   padding: 18px 0;
 }
 
-.page-projetos .footerInner{
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 0 clamp(16px, 4vw, 40px);
-}
-
 /* responsivo: ajustes por tela */
 @media (max-width: 720px){.page-projetos .nav{ flex-direction: column;
   align-items:flex-start; }
@@ -2509,15 +2375,22 @@ body.homePage { height: 100vh;
   background: transparent !important;
 }
 
+/* Centraliza os ícones do rodapé */ 
 .footerInner{
-  width: 100% !important;
-  max-width: 1180px !important;
-  margin: 0 auto !important;
-  padding: 0 clamp(16px, 4vw, 40px) !important;
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 40px);
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* esquerda | meio | direita */
+  align-items: center;
+  gap: 12px;
 }
+
+.homeFooter__left{  justify-self: start; }
+.homeFooter__mid{   justify-self: center; }
+.homeFooter__right{ justify-self: end; text-align: right; }
 
 /* projetos: cards, filtros e modal */
 .page-projetos .navLinks a{
@@ -2888,10 +2761,6 @@ body.page-projetos .pageMain{
   flex: 1;
 }
 
-/* rodapé: layout e links */
-body.page-projetos .homeFooter{
-  margin-top: auto;
-}
 
 /* responsivo: ajustes por tela */
 @media (min-width: 901px){
@@ -2954,3 +2823,549 @@ body.page-projetos .homeFooter{
 }
 
 @keyframes heroBlink{ 50%{ opacity:0; } }
+
+/* Alinha os materiais profissionais */
+#materiaisModal .matGrid{
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 900px){
+  #materiaisModal .matGrid{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Materiais Modal - grid igual ao layout original */
+#materiaisModal .matGrid{
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+#materiaisModal .matCard,
+#materiaisModal .matTop{
+  width: 100%;
+}
+
+/* mobile */
+@media (max-width: 900px){
+  #materiaisModal .matGrid{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* PILL roxo (Dados / Dev / TI) igual ao layout antigo */
+#materiaisModal .matTag{
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(124,58,237,.20);
+  border: 1px solid rgba(124,58,237,.35);
+  color: rgba(234,240,255,.92);
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 1;
+}
+
+/* garante que título + pill fiquem bem alinhados */
+#materiaisModal .matLeft{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Ícones PNG dentro do quadradinho */
+#materiaisModal .matIcon{
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+#materiaisModal .matIcon{
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;  /* centraliza */
+  overflow: hidden;     /* corta o que passar */
+}
+
+ #materiaisModal .matIconImg{
+  max-width: 100%;
+  max-height: 110%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 0 10px rgba(124,58,237,.18));
+  opacity: .95;
+}
+
+/* Botões Currículo/Carta: alinhar texto + ícone */
+#materiaisModal .matAction{
+  display: flex;
+  align-items: center;          /* centraliza na altura */
+  gap: 12px;
+}
+
+/* joga o ícone pra ponta direita */
+#materiaisModal .matAction .matFileImg{
+  margin-left: auto;            /* empurra pra direita */
+  flex: 0 0 auto;
+  align-self: center;           /* garante centro vertical */
+  display: block;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Ajuste de tamanhos incones */  
+.iconBtn .iconImg{
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
+}
+
+.iconBtn .iconImg{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Imagem do Linkedin / Whatsap */
+.iconBtn .iconImg{
+  width: 105%;
+  height: 105%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Só o Instagram (PNG) */
+.iconBtn.is-ig .iconImg{
+  width: 55%;
+  height: 55%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ===== ÍCONES DO RODAPÉ (só Home + Projetos + Principal) ===== */
+body.homePage .homeFooter .iconBtn .iconImg,
+body.page-projetos .homeFooter .iconBtn .iconImg{
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* LinkedIn (rodapé) */
+body.homePage .homeFooter .iconBtn.is-in .iconImg,
+body.page-projetos .homeFooter .iconBtn.is-in .iconImg{
+  width: 65px;
+  height: 65px;
+  transform: translateX(16px);
+}
+
+/* GitHub (rodapé) */
+body.homePage .homeFooter .iconBtn.is-gh .iconImg,
+body.page-projetos .homeFooter .iconBtn.is-gh .iconImg{
+  width: 44px;
+  height: 44px;
+}
+
+/* Instagram (rodapé) */
+body.homePage .homeFooter .iconBtn.is-ig .iconImg,
+body.page-projetos .homeFooter .iconBtn.is-ig .iconImg{
+  width: 28px;
+  height: 28px;
+}
+
+/* Espaçamento igual (rodapé) */
+body.homePage .homeFooter__mid,
+body.page-projetos .homeFooter__mid{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+}
+
+/* Espaçamento igual entre os ícones (Home + Projetos) */
+body.homePage .homeFooter__mid,
+body.page-projetos .homeFooter__mid{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;            /* aqui controla a distância */
+}
+
+/* Ajuste fino: empurra só o PNG do LinkedIn um pouco pra direita */
+body.homePage .iconBtn.is-in .iconImg,
+body.page-projetos .iconBtn.is-in .iconImg{
+  transform: translateX(16px);
+}
+
+/* ===== Fale comigo: trilho encolhe junto (só esse botão) ===== */
+.talkDrive2--callSmart{
+  display: flex;
+  align-items: center;
+  min-width: 0;             /* permite encolher */
+}
+
+.talkDrive2--callSmart .talkDrive2__text{
+  flex: 0 0 auto;           /* texto não encolhe */
+}
+
+.talkDrive2--callSmart .talkDrive2__lane{
+  flex: 1 1 auto;           /* trilho ocupa o resto e encolhe */
+  min-width: 0;             
+  max-width: 100%;
+}
+
+/* garante que o "thumb" do trilho não vaze (se tiver) */
+.talkDrive2--callSmart .talkDrive2__thumb,
+.talkDrive2--callSmart .talkDrive2__dot,
+.talkDrive2--callSmart .talkDrive2__arrow{
+  flex: 0 0 auto;
+}
+
+/* layout página principal 2x2 */
+@media (max-width: 1100px){
+
+  .talkDrive2--smart{
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .talkDrive2--smart .talkDrive2__lane{
+    flex: 1;
+    min-width: auto;
+  }
+}
+
+/* Modal do resumo com Experiência dentro */
+#resumoModal .modalCardClean{
+  max-height: calc(100vh - 140px);
+  overflow: auto;
+}
+
+#resumoModal .modalSep{
+  height: 1px;
+  background: rgba(255,255,255,.08);
+  margin: 16px 0;
+}
+
+/* Contato — mesmo fundo do Resumo */
+#contatoModal .modalCardClean{
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.10);
+  background:
+    radial-gradient(1200px 260px at 20% 0%, rgba(124,58,237,.16), transparent 55%),
+    radial-gradient(900px 240px at 90% 10%, rgba(59,130,246,.14), transparent 55%),
+    rgba(10, 14, 26, .78);
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.55),
+    inset 0 1px 0 rgba(255,255,255,.06);
+  backdrop-filter: blur(18px);
+}
+
+#contatoModal .modalTop{
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+#contatoModal .modalMini{
+  margin-top: 6px;
+  font-size: 13px;
+  opacity: .75;
+  font-weight: 600;
+  letter-spacing: .2px;
+}
+
+/* ===== Rodapé: ícones SEM quadrado (só na pagina principal) ===== */
+.footer .homeFooter__mid{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px; /* ajuste se quiser */
+}
+
+/* tamanho padrão do PNG no rodapé */
+.footer .iconBtn .iconImg{
+  width: 22px;
+  height: 22px;
+  display: block;
+  object-fit: contain;
+}
+
+/* se quiser tamanhos diferentes por ícone no rodapé */
+.footer .iconBtn.is-in .iconImg{ width: 65px; height: 65px; }
+.footer .iconBtn.is-gh .iconImg{ width: 44px; height: 44px; }
+.footer .iconBtn.is-ig .iconImg{ width: 28px; height: 28px; }
+
+/* Espaçamento só entre os ícones do rodapé (principal) */
+body.page-principal .footer .homeFooter__mid{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+}
+
+/* Empurra só o PNG do LinkedIn */
+body.page-principal .footer .iconBtn.is-in .iconImg{
+  transform: translateX(16px);
+}
+
+body.homePage{
+  min-height: 100vh;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* === layout do rodapé === */
+/* ===== Layout pra footer ser empurrado (zoom / expandir skills) ===== */
+body.homePage,
+body.page-principal,
+body.page-projetos{
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* o "main" precisa ocupar o espaço pra jogar o footer pra baixo */
+body.homePage main,
+body.page-principal main{
+  flex: 1;
+}
+
+body.page-projetos .pageMain{
+  flex: 1;
+}
+
+/* rodapé sempre no final */
+.footer,
+.homeFooter{
+  margin-top: auto;
+}
+
+/* =========================
+   SKILLS — ÍCONES (FLUTUANDO)
+   ========================= */
+
+.skillList{
+  list-style: none;          /* tira o bullet */
+  padding: 0;
+  margin: 0;
+}
+
+.skillItem{
+  display: grid;
+  grid-template-columns: 22px 1fr; /* coluna do ícone + texto */
+  gap: 10px;
+  align-items: start;
+  padding: 6px 0;
+}
+
+/* ícone com animação leve */
+.skillIcon{
+  /* ajustes globais (padrão) */
+  width: var(--i-size, 18px);
+  height: var(--i-size, 18px);
+  object-fit: contain;
+  display: block;
+
+  /* micro ajustes por ícone */
+  transform: translateY(var(--i-y, 0px));
+
+  /* animação de flutuar */
+  animation: skillFloat var(--i-dur, 3.6s) ease-in-out infinite;
+  animation-delay: var(--i-delay, 0s);
+
+  /* melhora “nitidez” em alguns casos */
+  image-rendering: auto;
+}
+
+@keyframes skillFloat{
+  0%, 100% { transform: translateY(calc(var(--i-y, 0px) + 0px)); }
+  50%      { transform: translateY(calc(var(--i-y, 0px) - var(--i-float, 3px))); }
+}
+
+/* acessibilidade: respeita quem desliga animações */
+@media (prefers-reduced-motion: reduce){
+  .skillIcon{ animation: none; }
+}
+
+/* Skills: manter ícone + texto em UMA linha */
+.skillItem{
+  display: flex;
+  align-items: center;
+  gap: 10px;          /* espaço entre ícone e texto */
+  padding: 8px 0;     /* mais respiro entre tópicos */
+}
+
+/* ícone não encolhe e não empurra o texto pra baixo */
+.skillIcon{
+  flex: 0 0 auto;
+  width: var(--i-size, 18px);
+  height: var(--i-size, 18px);
+  object-fit: contain;
+  display: block;
+}
+
+/* =========================
+   SKILLS — LISTA (LAYOUT)
+   ========================= */
+
+.skillList{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;              /* espaço entre itens (ajuste aqui) */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skillItem{
+  display: flex;
+  align-items: center;
+  gap: 12px;             /* espaço ícone -> texto */
+  margin: 0;
+  padding: 0;
+
+  /* flutuação do CONJUNTO (ícone + texto) */
+  --f-y: 0px;
+  --f-float: 4px;
+  --f-dur: 4s;
+  --f-delay: 0s;
+
+  animation: skillItemFloat var(--f-dur) ease-in-out infinite;
+  animation-delay: var(--f-delay);
+  will-change: transform;
+}
+
+@keyframes skillItemFloat{
+  0%, 100% { transform: translateY(var(--f-y)); }
+  50%      { transform: translateY(calc(var(--f-y) - var(--f-float))); }
+}
+
+/* =========================
+   SKILLS — ÍCONE (BASE)
+   ========================= */
+
+.skillIcon{
+  width: var(--i-size, 44px);   /* tamanho padrão */
+  height: var(--i-size, 44px);
+  object-fit: contain;
+  display: block;
+  flex: 0 0 auto;
+
+  /* ícone NÃO anima sozinho (quem anima é o .skillItem) */
+  animation: none;
+}
+
+/* =========================
+   SKILLS — TAMANHO POR ÍCONE
+   (tudo 44 por padrão; mude aqui quando precisar)
+   ========================= */
+
+.skillIcon.i-avalonia{ --i-size: 44px; }
+.skillIcon.i-csharp  { --i-size: 44px; }
+.skillIcon.i-dotnet  { --i-size: 44px; }
+.skillIcon.i-htmlcss { --i-size: 44px; }
+.skillIcon.i-js      { --i-size: 44px; }
+.skillIcon.i-python  { --i-size: 44px; }
+.skillIcon.i-sql     { --i-size: 44px; }
+.skillIcon.i-vba     { --i-size: 44px; }
+
+/* =========================
+   SKILLS — COR DO TEXTO POR ÍCONE
+   ========================= */
+
+/* Nome com visual "tech": gradiente + leve brilho */
+.skillItem .skillName{
+  /* fallback se algum browser não suportar */
+  color: var(--skill-color, #e9ecff);
+
+  /* gradiente no texto */
+  background-image: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--skill-color, #e9ecff) 35%, white),
+    var(--skill-color, #e9ecff),
+    color-mix(in srgb, var(--skill-color, #e9ecff) 35%, black)
+  );
+
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* “brilho” bem sutil */
+  text-shadow: 0 0 10px color-mix(in srgb, var(--skill-color, #e9ecff) 35%, transparent);
+
+  letter-spacing: 0.3px;
+}
+
+/* opcional: um micro “shimmer” tecnológico no hover */
+.skillItem:hover .skillName{
+  animation: techShimmer 1.2s linear infinite;
+}
+
+@keyframes techShimmer{
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* cada item define a própria cor */
+.skillItem.is-avalonia{ --skill-color: #a855f7; } /* roxo */
+.skillItem.is-csharp  { --skill-color: #a78bfa; } /* lilás */
+.skillItem.is-dotnet  { --skill-color: #60a5fa; } /* azul */
+.skillItem.is-htmlcss { --skill-color: #fb7185; } /* rosado (ajuste se quiser mais laranja/azul) */
+.skillItem.is-js      { --skill-color: #f59e0b; } /* laranja */
+.skillItem.is-python  { --skill-color: #facc15; } /* amarelo */
+.skillItem.is-sql     { --skill-color: #93c5fd; } /* azul claro */
+.skillItem.is-vba     { --skill-color: #f97316; } /* laranja */
+
+/* =========================
+   SKILLS — LINGUAGENS (3 colunas reservadas)
+   4 linhas por coluna
+   ========================= */
+
+.skillPanel[data-panel="langs"] .skillList--langs{
+  display: grid;
+
+  /* reserva SEMPRE 3 colunas (começo/meio/fim) */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  /* 4 itens por coluna */
+  grid-template-rows: repeat(4, auto);
+  grid-auto-flow: column;
+
+  column-gap: 0;     /* sem "buraco" exagerado */
+  row-gap: 1px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  /* deixa tudo alinhado pra esquerda dentro de cada coluna */
+  justify-items: start;
+  align-items: center;
+}
+
+/* garante que o painel não corte colunas */
+.skillPanel[data-panel="langs"],
+.skillPanel[data-panel="langs"] .skillPanelInner{
+  overflow: visible;
+}
+
