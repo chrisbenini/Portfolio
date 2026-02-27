@@ -3,24 +3,21 @@
 <html lang="pt-BR">
 <head>
   <!--Logo Topo da aba-->
-    <link rel="icon" type="image/png" sizes="32x32" href="../recursos/Fotos/logo/Logo-32.png?v=1">
-    <link rel="icon" type="image/png" sizes="16x16" href="../recursos/Fotos/logo/Logo-16.png?v=1">
-    <link rel="apple-touch-icon" sizes="180x180" href="../recursos/Fotos/logo/Logo-icon.png?v=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="../recursos/assets/logo/Logo-32.png?v=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="../recursos/assets/logo/Logo-16.png?v=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="../recursos/assets/logo/Logo-icon.png?v=1">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Christopher Benini | Portfólio</title>
 
-  
+  <!--Estlos que ele vai pegar-->
   <link rel="stylesheet" href="../css/estilos.css" />
-
-  
   <link rel="stylesheet" href="../css/estilos-mobile.css" media="(max-width: 900px)" />
 </head>
 
-<body>
+<body class="page-principal">
   <!-- fundo animado (canvas) -->
   <canvas id="bg" aria-hidden="true"></canvas>
-
   
   <header class="top">
     <div class="container nav">
@@ -31,13 +28,11 @@
         <a href="index.html">Home</a>
         <a href="#sobre">Sobre</a>
         <a href="#skills">Skills</a>
-        <a href="#experiencia">Experiência</a>
+        <a href="#" id="navExperiencia">Experiência</a>
       </nav>
-
       
       <button class="menuBtn" id="menuBtn" aria-label="Abrir menu">☰</button>
     </div>
-
     
     <section class="container hero">
       <div class="heroLeft">
@@ -48,49 +43,47 @@
         <h1>
          <span class="grad">Full Stack • Dados • T.I / Suporte Técnico</span>
         </h1>
-
         
         <div class="ctaRow"> 
         <a class="talkDrive2 talkDrive2--plain ctaPrime" href="projetos.html">
           <span class="talkDrive2__text">Ver projetos</span>
         </a>
-        <a class="talkDrive2 talkDrive2--plain" href="#materiais">
+        <a class="talkDrive2 talkDrive2--plain" href="#materiais" id="openMateriais">
           <span class="talkDrive2__text">Baixar currículo (por área)</span>
         </a>
         <button class="talkDrive2 talkDrive2--plain" id="openResumo" type="button">
           <span class="talkDrive2__text">Resumo profissional</span>
         </button> 
-        <a class="talkDrive2" href="#contato" aria-label="Ir para contato"> 
-        <span class="talkDrive2__icon" aria-hidden="true"> 
-        <svg viewBox="0 0 24 24"> 
-        <path d="M6.6 10.8c1.5 3 3.7 5.1 6.7 6.7l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.6c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/> 
-      </svg> 
-    </span>
-    <span class="talkDrive2__text">Fale comigo</span>
+        <button class="talkDrive2 talkDrive2--call talkDrive2--callSmart"
+        id="openContato"
+        type="button"
+        aria-label="Abrir contato">
+  <span class="talkDrive2__icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24">
+      <path d="M6.6 10.8c1.5 3 3.7 5.1 6.7 6.7l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.6c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/>
+    </svg>
+  </span>
 
-    
-    <span class="talkDrive2__lane" aria-hidden="true">
-      
-      <span class="talkDrive2__fly">
-        <svg viewBox="0 0 24 24">
-          <path d="M5 12h12"></path>
-          <path d="M13 6l6 6-6 6"></path>
-        </svg>
-      </span>
+  <span class="talkDrive2__text">Fale comigo</span>
 
-      
-      <span class="talkDrive2__dock">
-        <svg viewBox="0 0 24 24">
-          <path d="M5 12h12"></path>
-          <path d="M13 6l6 6-6 6"></path>
-        </svg>
-      </span>
+  <span class="talkDrive2__lane" aria-hidden="true">
+    <span class="talkDrive2__fly">
+      <svg viewBox="0 0 24 24">
+        <path d="M5 12h12"></path>
+        <path d="M13 6l6 6-6 6"></path>
+      </svg>
     </span>
-  </a>
+    <span class="talkDrive2__dock">
+      <svg viewBox="0 0 24 24">
+        <path d="M5 12h12"></path>
+        <path d="M13 6l6 6-6 6"></path>
+      </svg>
+    </span>
+  </span>
+</button>
         </div>
     </section>
   </header>
-
   
 <div id="resumoModal" class="modal" aria-hidden="true">
   <div class="modalOverlay" data-close="true"></div>
@@ -101,7 +94,7 @@
         <span class="proTag">Profile</span>
         <h3>Resumo profissional</h3>
         <p class="modalMini">
-          Dados • Desenvolvimento • TI/Suporte
+          Desenvolvimento • Dados • TI/Suporte
         </p>
       </div>
 
@@ -116,7 +109,7 @@
 
     <div class="modalTextBlock">
       <p>
-      Atuo de forma híbrida entre <strong>Dados</strong>, <strong>Desenvolvimento</strong> e <strong>TI</strong>,
+      Atuo de forma híbrida entre <strong>Desenvolvimento</strong>, <strong>Dados</strong> e <strong>TI</strong>,
       criando soluções que reduzem retrabalho, organizam processos e ajudam as áreas a tomarem decisões melhores.
       </p>
   <p>
@@ -125,235 +118,271 @@
   </p>
     </div>
 
-    <div class="modalActions modalActions3">
-      <a class="proBtn proBtnIcon" href="https://github.com/chrisbenini" target="_blank" rel="noreferrer">
-        <span class="ico" aria-hidden="true">
+    <div class="modalSep"></div>
+
+<div class="modalXpWrap" id="xpNoModal"></div>
+  <h3 class="modalSectionTitle">Experiência</h3>
+  <p class="modalMini modalMiniXp">Clique para ver detalhes do que eu fazia em cada atuação.</p>
+
+  <div class="xpList" data-accordion-group="experiencia">
+
+    <div class="xpItem accItem">
+      <button class="xpBtn accBtn" type="button" aria-expanded="false">
+        <span class="xpIco" aria-hidden="true">
           <svg viewBox="0 0 24 24">
-            <path d="M12 .5A12 12 0 0 0 0 12.8c0 5.42 3.44 10.01 8.2 11.64.6.11.82-.27.82-.6v-2.1c-3.34.75-4.04-1.66-4.04-1.66-.55-1.44-1.34-1.82-1.34-1.82-1.09-.77.08-.75.08-.75 1.2.09 1.83 1.28 1.83 1.28 1.07 1.9 2.8 1.35 3.49 1.03.11-.8.42-1.35.76-1.66-2.67-.31-5.47-1.38-5.47-6.15 0-1.36.46-2.47 1.22-3.34-.12-.31-.53-1.57.12-3.28 0 0 1-.33 3.3 1.28a11.1 11.1 0 0 1 6 0c2.3-1.61 3.3-1.28 3.3-1.28.65 1.71.24 2.97.12 3.28.76.87 1.22 1.98 1.22 3.34 0 4.78-2.8 5.83-5.48 6.14.43.38.82 1.13.82 2.28v3.38c0 .33.22.72.82.6A12.2 12.2 0 0 0 24 12.8 12 12 0 0 0 12 .5z"/>
+            <path d="M8 9 4.5 12 8 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 9 19.5 12 16 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10.5 16.5 13.5 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </span>
-        <span class="label">GitHub</span>
-        <span class="hintTag">Projetos</span>
-      </a>
 
-      <a class="proBtn proBtnIcon" href="https://www.linkedin.com/in/christopher-benini-081b7833a/" target="_blank" rel="noreferrer">
-        <span class="ico" aria-hidden="true">
+        <div class="xpLeft">
+          <div class="xpTop">
+            <span class="xpRole">Freelancer / Suporte Técnico</span>
+            <span class="xpTag">Cbtech</span>
+          </div>
+        </div>
+
+        <span class="xpToggle" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M8.5 9.5 12 13l3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </button>
+
+      <div class="accPanel xpPanel">
+        <div class="accPanelInner xpInner">
+          <p>
+            Desenvolvimento de pequenos sistemas e automações , desenvolvimento de dashboards e suporte técnico .
+            Atuação próxima do usuário para entender a dor e entregar melhorias rápidas.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="xpItem accItem">
+      <button class="xpBtn accBtn" type="button" aria-expanded="false">
+        <span class="xpIco" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3c-4.4 0-8 1.6-8 3.5S7.6 10 12 10s8-1.6 8-3.5S16.4 3 12 3z"
+              fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M4 6.5V12c0 1.9 3.6 3.5 8 3.5s8-1.6 8-3.5V6.5"
+              fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M4 12v5.5C4 19.4 7.6 21 12 21s8-1.6 8-3.5V12"
+              fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </span>
+
+        <div class="xpLeft">
+          <div class="xpTop">
+            <span class="xpRole">Analista de Suporte / Dados Júnior </span> 
+            <span class="xpTag">Dismed</span>
+          </div>
+        </div>
+
+        <span class="xpToggle" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M8.5 9.5 12 13l3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </button>
+
+      <div class="accPanel xpPanel">
+        <div class="accPanelInner xpInner">
+          <p>
+            Realização de ETL e consultas em SQL, criação de dashboards e automações para rotina do setor.
+            Suporte ao ERP, análise de dados e criação de relatórios gerenciais.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="xpItem accItem">
+      <button class="xpBtn accBtn" type="button" aria-expanded="false">
+        <span class="xpIco" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 19V5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M4 19h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M8 17V11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M12 17V7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M16 17v-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+
+        <div class="xpLeft">
+          <div class="xpTop">
+            <span class="xpRole">Auxiliar / Assistente de Dados</span>
+            <span class="xpTag">Dismed</span>
+          </div>
+        </div>
+
+        <span class="xpToggle" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M8.5 9.5 12 13l3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </button>
+
+      <div class="accPanel xpPanel">
+        <div class="accPanelInner xpInner">
+          <p>
+            Atualização de preços, análises de margem e suporte na construção de relatórios.
+            Apoio ao time com consistência de dados e acompanhamento de indicadores.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+
+<!--Modal Curriculos-->
+<div id="materiaisModal" class="modal" aria-hidden="true">
+  <div class="modalOverlay" data-close="true"></div>
+
+  <div class="modalCard modalCardClean" role="dialog" aria-modal="true" aria-label="Materiais Profissionais">
+    <div class="modalTop">
+      <div class="modalTitle">
+        <span class="proTag">Documents</span>
+        <h3>Materiais Profissionais</h3>
+        <p class="modalMini">
+          Escolha o currículo e a carta conforme a área da vaga.
+        </p>
+      </div>
+
+      <div class="modalRight">
+        <button class="modalClose" type="button" data-close="true" aria-label="Fechar">✕</button>
+      </div>
+    </div>
+
+
+    <!-- AQUI dentro você cola os 3 cards (Dados/BI, Dev, TI/Suporte) -->
+    <div class="matGrid" id="materiaisGrid">
+
+      <!-- CARD 1 -->
+      <div class="matCard" data-mat-card>
+        <button class="matTop" type="button">
+          <div class="matLeft">
+            <span class="matIcon" aria-hidden="true">
+              <img class="matIconImg" src="../recursos/assets/icones/dev/Dev_cor_512.png" alt="">
+            </span>
+            <span class="matTitle">Desenvolvimento</span>
+            <span class="matTag">Dev</span>
+          </div>
+          <span class="matPlus">+</span>
+        </button>
+
+        <div class="matPanel">
+          <a class="matAction" href="../recursos/curriculos/programacao/Curriculo_Christopher_Programacao.pdf" download>
+            Currículo <img class="matFileImg" src="../recursos/assets/icones/pdf/Pdf_cor_512.png" alt="" aria-hidden="true">
+          </a>
+          <a class="matAction" href="../recursos/curriculos/programacao/Carta_dev.pdf" download>
+            Carta de apresentação <img class="matFileImg" src="../recursos/assets/icones/pdf/Pdf_cor_512.png" alt="" aria-hidden="true">
+          </a>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="matCard" data-mat-card>
+        <button class="matTop" type="button">
+          <div class="matLeft">
+            <span class="matIcon" aria-hidden="true">
+              <img class="matIconImg" src="../recursos/assets/icones/dados/Dados_cor_512.png" alt="">
+            </span>
+            <span class="matTitle">Dados / BI</span>
+            <span class="matTag">Dados</span>
+          </div>
+          <span class="matPlus">+</span>
+        </button>
+
+        <div class="matPanel">
+          <a class="matAction" href="../recursos/curriculos/dados/Curriculo_Christopher_dados.pdf" download>
+            Currículo <img class="matFileImg" src="../recursos/assets/icones/pdf/Pdf_cor_512.png" alt="" aria-hidden="true">
+          </a>
+          <a class="matAction" href="../recursos/curriculos/dados/Carta_dados.pdf" download>
+            Carta de apresentação <img class="matFileImg" src="../recursos/assets/icones/pdf/Pdf_cor_512.png" alt="" aria-hidden="true">
+          </a>
+        </div>
+      </div>
+      
+      <!-- CARD 3 -->
+      <div class="matCard" data-mat-card>
+        <button class="matTop" type="button">
+          <div class="matLeft">
+            <span class="matIcon" aria-hidden="true">
+              <img class="matIconImg" src="../recursos/assets/icones/ti/TI_cor_512.png" alt="">
+            </span>
+            <span class="matTitle">TI / Suporte</span>
+            <span class="matTag">TI</span>
+          </div>
+          <span class="matPlus">+</span>
+        </button>
+
+        <div class="matPanel">
+          <a class="matAction" href="../recursos/curriculos/ti/Curriculo_Christopher_TI.pdf" download>
+            Currículo <img class="matFileImg" src="../recursos/assets/icones/pdf/Pdf_cor_512.png" alt="" aria-hidden="true">
+          </a>
+          <a class="matAction" href="../recursos/curriculos/ti/Carta_TI.pdf" download>
+            Carta de apresentação <img class="matFileImg" src="../recursos/assets/icones/pdf/Pdf_cor_512.png" alt="" aria-hidden="true">
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+  
+ <!-- Modal Contato -->
+<div id="contatoModal" class="modal" aria-hidden="true">  
+  <div class="modalOverlay" data-close="true"></div>
+
+  <div class="modalCard modalCardClean" role="dialog" aria-modal="true" aria-label="Contato">
+    <div class="modalTop">
+      <div class="modalTitle">
+        <span class="proTag">Contato</span>
+        <h3>Fale comigo</h3>
+        <p class="modalMini">Bora conversar? Me chama por aqui:</p>
+      </div>
+
+      <div class="modalRight">
+        <button class="modalClose" type="button" data-close="true" aria-label="Fechar">✕</button>
+      </div>
+    </div>
+
+    <div class="modalTextBlock">
+      <div class="contactIcons contactIcons--modal">
+        <a class="iconBtn is-mail" href="mailto:chrisbenini13@gmail.com" title="Email" aria-label="Email">
           <svg viewBox="0 0 24 24" aria-hidden="true">
-  <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 23.5h4V8.5h-4v15zM8.5 8.5h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v8.9h-4v-7.9c0-1.88-.03-4.3-2.62-4.3-2.63 0-3.03 2.05-3.03 4.17v8.03h-3.75V8.5z"/>
-        </svg>
-        </span>
-        <span class="label">LinkedIn</span>
-        <span class="hintTag">Perfil</span>
-      </a>
-
-      <a class="proBtn proBtnIcon" href="mailto:chrisbenini13@gmail.com">
-        <span class="ico" aria-hidden="true">
-          <svg viewBox="0 0 24 24">
-            <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"></path>
           </svg>
-        </span>
-        <span class="label">Email</span>
-        <span class="hintTag">Contato</span>
-      </a>
+        </a>
+
+        <a class="iconBtn is-wpp"
+           href="https://wa.me/5517981478331?text=Oi%20Christopher!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20falar%20sobre%20uma%20oportunidade."
+           target="_blank" rel="noreferrer" title="WhatsApp" aria-label="WhatsApp">
+          <img src="../recursos/assets/icones/whatsapp/Zap_sc_512.png" alt="" aria-hidden="true" class="iconImg">
+        </a>
+              
+        <a class="iconBtn is-ig"
+           href="https://www.instagram.com/chrisferruge/"
+           target="_blank" rel="noreferrer" title="Instagram" aria-label="Instagram">
+          <img src="../recursos/assets/icones/instagram/Insta_sc_512.png" alt="" aria-hidden="true" class="iconImg">
+        </a>
+      </div>
     </div>
   </div>
 </div>
 
-  
   <!-- conteúdo principal -->
   <main class="container">
-    
-    <section id="materiais" class="section">
-  <h2>Materiais Profissionais</h2>
-  <p class="sectionLead">Escolha o currículo e a carta conforme a área da vaga.</p>
-
-  <div class="grid">
-
-    
-    <article class="matCard">
-      <button class="matTop" type="button" aria-expanded="false">
-        <div class="matLeft">
-          <span class="matIcon" aria-hidden="true">
-            
-            <svg viewBox="0 0 24 24">
-              <rect x="4" y="10" width="3" height="10" rx="1"></rect>
-              <rect x="10" y="6" width="3" height="14" rx="1"></rect>
-              <rect x="16" y="3" width="3" height="17" rx="1"></rect>
-            </svg>
-          </span>
-
-          <div class="matTitleBox">
-            <h3 class="matName">Dados / BI</h3>
-            <span class="pill">Dados</span>
-          </div>
-        </div>
-
-        <div class="matRight">
-          <span class="matToggle" aria-hidden="true">+</span>
-        </div>
-      </button>
-
-      <div class="matPanel">
-        <a class="matAction" href="../recursos/curriculos/dados/Curriculo_Christopher_Dados.pdf" download>
-          <span class="matActionTitle">Currículo</span>
-          <span class="pdfIcon" aria-hidden="true" title="PDF">
-            <svg viewBox="0 0 24 24">
-              
-              <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path>
-              
-              <path d="M14 2v6h6"></path>
-              
-              <path d="M8 13h3"></path>
-              <path d="M8 16h5"></path>
-              <path d="M8 19h4"></path>
-            </svg>
-          </span>
-        </a>
-
-        <a class="matAction" href="../recursos/curriculos/dados/Carta_Dados.pdf" download>
-          <span class="matActionTitle">Carta de apresentação</span>
-          <span class="pdfIcon" aria-hidden="true" title="PDF">
-            <svg viewBox="0 0 24 24">
-              
-              <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path>
-              
-              <path d="M14 2v6h6"></path>
-              
-              <path d="M8 13h3"></path>
-              <path d="M8 16h5"></path>
-              <path d="M8 19h4"></path>
-            </svg>
-          </span>
-        </a>
-      </div>
-    </article>
-
-    
-    <article class="matCard">
-      <button class="matTop" type="button" aria-expanded="false">
-        <div class="matLeft">
-          <span class="matIcon" aria-hidden="true">
-            
-            <svg viewBox="0 0 24 24">
-            <path d="M8.2 16.6 3.6 12l4.6-4.6" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M15.8 7.4 20.4 12l-4.6 4.6" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M10 19 14 5" fill="none" stroke="rgba(255,255,255,.65)" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </span>
-
-          <div class="matTitleBox">
-            <h3 class="matName">Desenvolvimento</h3>
-            <span class="pill">Dev</span>
-          </div>
-        </div>
-
-        <div class="matRight">
-          <span class="matToggle" aria-hidden="true">+</span>
-        </div>
-      </button>
-
-      <div class="matPanel">
-        <a class="matAction" href="../recursos/curriculos/programacao/Curriculo_Christopher_Programacao.pdf" download>
-          <span class="matActionTitle">Currículo</span>
-          <span class="pdfIcon" aria-hidden="true" title="PDF">
-            <svg viewBox="0 0 24 24">
-              
-              <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path>
-              
-              <path d="M14 2v6h6"></path>
-              
-              <path d="M8 13h3"></path>
-              <path d="M8 16h5"></path>
-              <path d="M8 19h4"></path>
-            </svg>
-          </span>
-        </a>
-
-        <a class="matAction" href="../recursos/curriculos/programacao/Carta_desenvolvimento.pdf" download>
-          <span class="matActionTitle">Carta de apresentação</span>
-          <span class="pdfIcon" aria-hidden="true" title="PDF">
-            <svg viewBox="0 0 24 24">
-              
-              <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path>
-              
-              <path d="M14 2v6h6"></path>
-              
-              <path d="M8 13h3"></path>
-              <path d="M8 16h5"></path>
-              <path d="M8 19h4"></path>
-            </svg>
-          </span>
-        </a>
-      </div>
-    </article>
-
-    
-    <article class="matCard">
-      <button class="matTop" type="button" aria-expanded="false">
-        <div class="matLeft">
-          <span class="matIcon" aria-hidden="true">
-            
-            <svg viewBox="0 0 24 24">
-            <path d="M4 5.5h16c1.1 0 2 .9 2 2v8.5c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V7.5c0-1.1.9-2 2-2z" fill="rgba(255,255,255,.12)" stroke="rgba(255,255,255,.55)"/>
-            <path d="M9 20h6" stroke="rgba(255,255,255,.75)" stroke-width="2" stroke-linecap="round"/>
-            <path d="M12 18v2" stroke="rgba(255,255,255,.75)" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </span>
-
-          <div class="matTitleBox">
-            <h3 class="matName">TI / Suporte</h3>
-            <span class="pill">TI</span>
-          </div>
-        </div>
-
-        <div class="matRight">
-          <span class="matToggle" aria-hidden="true">+</span>
-        </div>
-      </button>
-
-      <div class="matPanel">
-        <a class="matAction" href="../recursos/curriculos/ti/Curriculo_Christopher_TI.pdf" download>
-          <span class="matActionTitle">Currículo</span>
-          <span class="pdfIcon" aria-hidden="true" title="PDF">
-            <svg viewBox="0 0 24 24">
-              
-              <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path>
-              
-              <path d="M14 2v6h6"></path>
-              
-              <path d="M8 13h3"></path>
-              <path d="M8 16h5"></path>
-              <path d="M8 19h4"></path>
-            </svg>
-          </span>
-        </a>
-
-        <a class="matAction" href="../recursos/curriculos/ti/Carta_TI.pdf" download>
-          <span class="matActionTitle">Carta de apresentação</span>
-          <span class="pdfIcon" aria-hidden="true" title="PDF">
-            <svg viewBox="0 0 24 24">
-              
-              <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path>
-              
-              <path d="M14 2v6h6"></path>
-              
-              <path d="M8 13h3"></path>
-              <path d="M8 16h5"></path>
-              <path d="M8 19h4"></path>
-            </svg>
-          </span>
-        </a>
-      </div>
-    </article>
-
-  </div>
-</section>
-
+       
     <section id="sobre" class="section">
       <h2>Sobre</h2>
 
       <p class="sectionLead aboutLead">
-        Atuo na ponte entre <b>Dados</b>, <b>Desenvolvimento</b> e <b>TI</b>, entregando automações,
+        Atuo na ponte entre <b>Desenvolvimento</b>, <b>Dados</b> e <b>TI</b>, entregando automações,
         integrações e dashboards que viram resultado no dia a dia.
       </p>
 
@@ -467,219 +496,93 @@
         </button>
       </div>
 
+      <!--icones personalizados aba de linguagens-->
       <div class="skillPanelWrap">
-        <div class="skillPanel" data-panel="langs" role="tabpanel">
-          <div class="skillPanelInner">
-            <ul class="skillList">
-              <li><b>Python</b> — automação, ETL e scripts para dados.</li>
-              <li><b>SQL</b> — consultas, modelagem e extração.</li>
-              <li><b>C#</b> — pequenos sistemas, utilitários e automações.</li>
-              <li><b>VBA</b> — automação no Excel e rotinas corporativas.</li>
-              <li><b>JavaScript</b> — interatividade web e integrações simples.</li>
-              <li><b>HTML/CSS</b> — estrutura e layout de interfaces.</li>
-              <li><b>.NET</b> — APIs e aplicações backend.</li>
-              <li><b>Avalonia</b> — apps desktop modernos (UI).</li>
-            </ul>
-          </div>
-        </div>
+  <div class="skillPanel" data-panel="langs" role="tabpanel">
+    <div class="skillPanelInner">
+      <ul class="skillList skillList--langs">
+        <li class="skillItem is-avalonia">
+          <img class="skillIcon i-avalonia" src="../recursos/assets/icones/avalonia/Avalonia_cor_512.png" alt="" aria-hidden="true">
+          <b class="skillName">Avalonia</b>
+        </li>
+        <li class="skillItem is-csharp">
+          <img class="skillIcon i-csharp" src="../recursos/assets/icones/c/C_cor_512.png" alt="" aria-hidden="true">
+          <b class="skillName">C#</b>
+        </li>
+        <li class="skillItem is-dotnet">
+          <img class="skillIcon i-dotnet" src="../recursos/assets/icones/net/Net_cor_512.png" alt="" aria-hidden="true">
+          <b class="skillName">.NET</b>
+        </li>
+        <li class="skillItem is-htmlcss">
+          <img class="skillIcon i-htmlcss" src="../recursos/assets/icones/htcs/Hc_cor_512.png" alt="" aria-hidden="true">
+          <b class="skillName">HTML/CSS</b>
+        </li>
+        <li class="skillItem is-js">
+          <img class="skillIcon i-js" src="../recursos/assets/icones/js/Js_cor_512.png" alt="" aria-hidden="true">
+          <b class="skillName">JavaScript</b>
+        </li>
+        <li class="skillItem is-python">
+          <img class="skillIcon i-python" src="../recursos/assets/icones/python/Python_cor_512.png" alt="" aria-hidden="true">
+          <b class="skillName">Python</b>
+        </li>
+        <li class="skillItem is-sql">
+          <img class="skillIcon i-sql" src="../recursos/assets/icones/dados/Sql_cor_512.png" alt="" aria-hidden="true">
+          <b class="skillName">SQL</b>
+        </li>
+        <li class="skillItem is-vba">
+          <img class="skillIcon i-vba" src="../recursos/assets/icones/vba/Vba_cor_512.png" alt="" aria-hidden="true">
+          <b class="skillName">VBA</b>
+        </li>
+      </ul>
+    </div>
+  </div>
 
+        <!--aba Dados e BI-->
         <div class="skillPanel" data-panel="dados" role="tabpanel">
           <div class="skillPanelInner">
             <ul class="skillList">
-              <li><b>Power BI</b> — dashboards, KPIs e storytelling.</li>
-              <li><b>DAX</b> — medidas, indicadores e performance.</li>
-              <li><b>Power Query</b> — tratamento e ingestão de dados.</li>
-              <li><b>Excel avançado</b> — tabelas, funções, automações.</li>
-              <li><b>ETL</b> — organização de fluxo e padronização.</li>
+              <li><b>Power BI</b>
+              <li><b>DAX</b>
+              <li><b>Power Query</b>
+              <li><b>Excel avançado</b>
+              <li><b>ETL</b>
             </ul>
           </div>
         </div>
 
+        <!--Aba TI / Suporte-->
         <div class="skillPanel" data-panel="infra" role="tabpanel">
           <div class="skillPanelInner">
             <ul class="skillList">
-              <li><b>Active Directory</b> — usuários, permissões e políticas.</li>
-              <li><b>Redes</b> — diagnóstico, configuração e suporte.</li>
-              <li><b>Windows Server</b> — rotinas e troubleshooting.</li>
-              <li><b>Hardware/Software</b> — manutenção e suporte técnico.</li>
-              <li><b>ERP</b> — suporte e melhoria de processos.</li>
+              <li><b>Active Directory</b>
+              <li><b>Redes</b>
+              <li><b>Windows Server</b>
+              <li><b>Hardware/Software</b>
+              <li><b>ERP</b>
             </ul>
           </div>
         </div>
-    </section>
-
-    
-<section id="experiencia" class="section">
-  <h2>Experiência</h2>
-  <p class="sectionLead">Clique para ver detalhes do que eu fazia em cada atuação.</p>
-
-  <div class="xpList" data-accordion-group="experiencia">
-
-    <div class="xpItem accItem">
-      <button class="xpBtn accBtn" type="button" aria-expanded="false">
-        <span class="xpIco" aria-hidden="true">
-    
-    <svg viewBox="0 0 24 24">
-      <path d="M8 9 4.5 12 8 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M16 9 19.5 12 16 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M10.5 16.5 13.5 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-
-</span>
-
-        <div class="xpLeft">
-          <div class="xpTop">
-            <span class="xpRole">Programador / Suporte Técnico</span>
-            <span class="xpTag">Cbtech</span>
-          </div>
-        </div>
-
-        <span class="xpToggle" aria-hidden="true">
-          
-          <svg viewBox="0 0 24 24">
-            <path d="M8.5 9.5 12 13l3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </span>
-      </button>
-
-      <div class="accPanel xpPanel">
-        <div class="accPanelInner xpInner">
-          <p>
-            Desenvolvimento de sistemas e automações , suporte técnico, troubleshooting e implantação de soluções.
-            Atuação próxima do usuário para entender a dor e entregar melhorias rápidas.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="xpItem accItem">
-      <button class="xpBtn accBtn" type="button" aria-expanded="false">
-        <span class="xpIco" aria-hidden="true">
-  
-  <svg viewBox="0 0 24 24">
-    <path d="M12 3c-4.4 0-8 1.6-8 3.5S7.6 10 12 10s8-1.6 8-3.5S16.4 3 12 3z"
-      fill="none" stroke="currentColor" stroke-width="2"/>
-    <path d="M4 6.5V12c0 1.9 3.6 3.5 8 3.5s8-1.6 8-3.5V6.5"
-      fill="none" stroke="currentColor" stroke-width="2"/>
-    <path d="M4 12v5.5C4 19.4 7.6 21 12 21s8-1.6 8-3.5V12"
-      fill="none" stroke="currentColor" stroke-width="2"/>
-  </svg>
-</span>
-
-        <div class="xpLeft">
-          <div class="xpTop">
-            <span class="xpRole">Analista de Suporte Júnior / Pricing</span>
-            <span class="xpTag">Dismed</span>
-          </div>
-        </div>
-
-        <span class="xpToggle" aria-hidden="true">
-          <svg viewBox="0 0 24 24">
-            <path d="M8.5 9.5 12 13l3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </span>
-      </button>
-
-      <div class="accPanel xpPanel">
-        <div class="accPanelInner xpInner">
-          <p>
-            Realização de ETL e consultas em SQL, criação de dashboards e automações para rotina do setor.
-            Suporte ao ERP e análise de dados para pricing e relatórios gerenciais.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="xpItem accItem">
-      <button class="xpBtn accBtn" type="button" aria-expanded="false">
-        <span class="xpIco" aria-hidden="true">
-  
-  <svg viewBox="0 0 24 24">
-    <path d="M4 19V5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    <path d="M4 19h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    <path d="M8 17V11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    <path d="M12 17V7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    <path d="M16 17v-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-  </svg>
-</span>
-
-        <div class="xpLeft">
-          <div class="xpTop">
-            <span class="xpRole">Auxiliar / Assistente de Pricing</span>
-            <span class="xpTag">Dismed</span>
-          </div>
-        </div>
-
-        <span class="xpToggle" aria-hidden="true">
-          <svg viewBox="0 0 24 24">
-            <path d="M8.5 9.5 12 13l3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </span>
-      </button>
-
-      <div class="accPanel xpPanel">
-        <div class="accPanelInner xpInner">
-          <p>
-            Atualização de preços, análises de margem e suporte na construção de relatórios.
-            Apoio ao time com consistência de dados e acompanhamento de indicadores.
-          </p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-    
-    <section id="contato" class="section">
-      <h2>Contato</h2>
-      <p class="sectionLead">Bora conversar? Me chama por aqui:</p>
-
-      <div class="contactIcons">
-  <a class="iconBtn is-mail" href="mailto:chrisbenini13@gmail.com" title="Email" aria-label="Email">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"></path>
-          </svg>
-        </a>
-
-        <a class="iconBtn is-wpp" href="https://wa.me/5517981478331?text=Oi%20Christopher!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20falar%20sobre%20uma%20oportunidade."
-     target="_blank" rel="noreferrer" title="WhatsApp" aria-label="WhatsApp">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M20.52 3.48A11.91 11.91 0 0 0 12.02 0C5.39 0 .01 5.38 0 12c0 2.11.55 4.16 1.6 5.98L0 24l6.2-1.63A11.93 11.93 0 0 0 12.02 24C18.65 24 24 18.62 24 12c0-3.2-1.25-6.2-3.5-8.52zM12.02 22a9.9 9.9 0 0 1-5.04-1.37l-.36-.21-3.68.97.98-3.58-.23-.37A9.9 9.9 0 0 1 2.1 12c0-5.46 4.45-9.9 9.92-9.9 2.65 0 5.14 1.03 7.01 2.9A9.86 9.86 0 0 1 21.92 12c0 5.46-4.45 10-9.9 10zm5.77-7.44c-.32-.16-1.87-.92-2.16-1.03-.29-.11-.5-.16-.71.16-.21.32-.82 1.03-1.01 1.24-.19.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.6-.95-.84-1.6-1.88-1.78-2.2-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.19.21-.32.32-.53.11-.21.05-.4-.03-.55-.08-.16-.71-1.72-.97-2.35-.26-.63-.53-.55-.71-.55h-.61c-.21 0-.55.08-.84.4-.29.32-1.1 1.08-1.1 2.63 0 1.55 1.13 3.05 1.29 3.26.16.21 2.22 3.39 5.38 4.76.75.32 1.33.51 1.78.66.75.24 1.43.2 1.97.12.6-.09 1.87-.76 2.13-1.49.26-.74.26-1.37.18-1.5-.08-.13-.29-.21-.61-.37z"/>
-  </svg>
-        </a>
-
-        <a class="iconBtn is-in" href="https://www.linkedin.com/in/christopher-benini-081b7833a/" target="_blank" rel="noreferrer" title="LinkedIn" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.67H9.33V9h3.41v1.56h.05c.48-.9 1.65-1.86 3.4-1.86 3.63 0 4.3 2.39 4.3 5.5v6.25zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM3.56 20.45V9h3.56v11.45H3.56z"></path>
-          </svg>
-        </a>
-
-        <a class="iconBtn is-gh" href="https://github.com/chrisbenini" target="_blank" rel="noreferrer" title="GitHub" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 .5C5.73.5.75 5.74.75 12.2c0 5.2 3.44 9.6 8.2 11.15.6.12.82-.26.82-.58v-2.2c-3.34.74-4.04-1.67-4.04-1.67-.55-1.43-1.34-1.8-1.34-1.8-1.1-.77.08-.76.08-.76 1.22.09 1.86 1.28 1.86 1.28 1.08 1.9 2.83 1.35 3.52 1.03.11-.81.42-1.35.76-1.66-2.66-.31-5.46-1.37-5.46-6.1 0-1.35.46-2.46 1.23-3.33-.12-.31-.53-1.57.12-3.27 0 0 1.01-.33 3.3 1.27a11 11 0 0 1 3-.42c1.02 0 2.05.14 3 .42 2.29-1.6 3.3-1.27 3.3-1.27.65 1.7.24 2.96.12 3.27.77.87 1.23 1.98 1.23 3.33 0 4.74-2.8 5.79-5.47 6.1.43.38.81 1.12.81 2.27v3.36c0 .32.22.7.83.58 4.75-1.55 8.18-5.95 8.18-11.15C23.25 5.74 18.27.5 12 .5z"></path>
-          </svg>
-        </a>
-
-          <a class="iconBtn is-ig" href="https://www.instagram.com/chrisferruge/" target="_blank" rel="noreferrer" title="Instagram" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zm5.2-2.05a1.05 1.05 0 1 1-1.05 1.05 1.05 1.05 0 0 1 1.05-1.05z"></path>
-          </svg>
-        </a>
-      </div>
-    </section>
+    </section>  
   </main>
-
-  
+    
   <!-- rodapé -->
   <footer class="footer">
     <div class="container footerInner">
-      <span>© 2026 Christopher Benini</span>
-      <span class="muted">HTML • CSS • JS</span>
+      <div class="homeFooter__left">© 2026 Christopher Benini</div>
+      <div class="homeFooter__mid">    
+      <a class="iconBtn is-in" href="https://www.linkedin.com/in/christopher-benini-081b7833a/" target="_blank" rel="noreferrer" title="LinkedIn" aria-label="LinkedIn">
+        <img class="iconImg" src="../recursos/assets/icones/linkedin/Linkedin_sc_512.png" alt="" aria-hidden="true">
+      </a>
+      <a class="iconBtn is-gh" href="https://github.com/chrisbenini" target="_blank" rel="noreferrer" title="GitHub" aria-label="GitHub">
+        <img class="iconImg" src="../recursos/assets/icones/github/Git_sc_512.png" alt="" aria-hidden="true">
+      </a>
+      <a class="iconBtn is-ig" href="https://www.instagram.com/chrisferruge/" target="_blank" rel="noreferrer" title="Instagram" aria-label="Instagram">
+        <img class="iconImg" src="../recursos/assets/icones/instagram/Insta_sc_512.png" alt="" aria-hidden="true">
+      </a>
+  </div>
+      <div class="homeFooter__right">HTML • CSS • JS</div>
     </div>
-  </footer>
-
-  
+  </footer> 
   <!-- scripts da página -->
   <script src="../js/funcoes.js"></script>
 </body>
