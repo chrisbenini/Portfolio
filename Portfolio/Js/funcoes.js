@@ -72,12 +72,16 @@ if (canvas && ctx) {
     ctx.fillRect(0, 0, w, h);
   }
 
+  // Bolas do fundo
+  const ORB_SPEED = 3.0; // + rápido 
+  const ORB_SIZE  = 0.85; // menor 
+
   const orbs = [
-    { x: -300, y: 0, vx: 0.18, vy: 0.02, r: 260, c0: [168, 139, 250], c1: [96, 165, 250], phase: 0.0 },
-    { x: 0, y: 0, vx: -0.14, vy: 0.01, r: 320, c0: [96, 165, 250], c1: [124, 58, 237], phase: 1.7 },
-    { x: 0, y: 0, vx: 0.10, vy: -0.06, r: 240, c0: [124, 58, 237], c1: [96, 165, 250], phase: 3.1 },
-    { x: 0, y: 0, vx: -0.08, vy: 0.07, r: 220, c0: [59, 130, 246], c1: [168, 139, 250], phase: 4.4 },
-  ];
+  { x:-300, y:0, vx:0.18*ORB_SPEED, vy:0.02*ORB_SPEED, r:260*ORB_SIZE, c0:[168,139,250], c1:[96,165,250], phase:0.0 },
+  { x:0, y:0, vx:-0.14*ORB_SPEED, vy:0.01*ORB_SPEED, r:320*ORB_SIZE, c0:[96,165,250], c1:[124,58,237], phase:1.7 },
+  { x:0, y:0, vx:0.10*ORB_SPEED, vy:-0.06*ORB_SPEED, r:240*ORB_SIZE, c0:[124,58,237], c1:[96,165,250], phase:3.1 },
+  { x:0, y:0, vx:-0.08*ORB_SPEED, vy:0.07*ORB_SPEED, r:220*ORB_SIZE, c0:[59,130,246], c1:[168,139,250], phase:4.4 },
+];
 
 // função initOrbs: lógica principal
   function initOrbs() {
@@ -191,7 +195,7 @@ if (canvas && ctx) {
   closeAll();
 })();
 
-// bloco automático: roda ao carregar a página
+// bloco automático: roda ao carregar a página , aqui ele se auto ajusta quando uma caixa abre
 (function () {
   const tabs = document.querySelectorAll(".skillTab");
   const panels = document.querySelectorAll(".skillPanel");
@@ -199,9 +203,30 @@ if (canvas && ctx) {
   if (!tabs.length || !panels.length || !wrap) return;
 
   let openKey = null;
+  let lastBtn = null;
 
-// função closeAll: lógica principal
-  function closeAll() {
+  // faz a página “acompanhar” a expansão (sem você ter que scrollar)
+  function reveal(el, pad = 24) {
+    if (!el) return;
+
+    const r = el.getBoundingClientRect();
+    let dy = 0;
+
+    // se o final ficou pra fora da tela, desce
+    if (r.bottom > window.innerHeight - pad) {
+      dy = r.bottom - (window.innerHeight - pad);
+    }
+    // se o começo ficou pra cima, sobe
+    else if (r.top < pad) {
+      dy = r.top - pad;
+    }
+
+    if (dy !== 0) {
+      window.scrollBy({ top: dy, behavior: "smooth" });
+    }
+  }
+
+  function closeAll(scrollToBtn = true) {
     tabs.forEach(t => {
       t.classList.remove("is-active");
       t.setAttribute("aria-selected", "false");
@@ -210,9 +235,13 @@ if (canvas && ctx) {
     panels.forEach(p => p.classList.remove("is-open"));
     wrap.style.display = "none";
     openKey = null;
+
+    // ao fechar, “volta junto” pro botão clicado
+    if (scrollToBtn && lastBtn) {
+      requestAnimationFrame(() => reveal(lastBtn, 24));
+    }
   }
 
-// função openTab: lógica principal
   function openTab(key) {
     tabs.forEach(t => {
       const active = t.dataset.skill === key;
@@ -226,54 +255,73 @@ if (canvas && ctx) {
 
     wrap.style.display = "block";
     openKey = key;
+
+    // depois de abrir e renderizar a altura nova, centraliza na área expandida
+    const panel = document.querySelector(`.skillPanel[data-panel="${key}"]`);
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => reveal(panel || wrap, 24));
+    });
   }
 
   tabs.forEach(btn => {
-// escuta click: reação do usuário
     btn.addEventListener("click", () => {
+      lastBtn = btn;
+
       const key = btn.dataset.skill;
-      if (openKey === key) closeAll();
+      if (openKey === key) closeAll(true);
       else openTab(key);
     });
   });
 
-  closeAll();
+  closeAll(false);
 })();
 
-// bloco automático: roda ao carregar a página
 (function () {
   const openBtn = document.getElementById("openResumo");
   const modal = document.getElementById("resumoModal");
+  const navXp = document.getElementById("navExperiencia");
+
   if (!openBtn || !modal) return;
 
-// função open: lógica principal
   function open() {
-    modal.classList.add("is-open");
-    modal.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-  }
+  modal.classList.add("is-open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+  document.body.classList.add("isModalOpen"); // ADD
+}
 
-// função close: lógica principal
-  function close() {
-    modal.classList.remove("is-open");
-    modal.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
-  }
+function close() {
+  modal.classList.remove("is-open");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+  document.body.classList.remove("isModalOpen"); // ADD
+}
 
-// escuta click: reação do usuário
   openBtn.addEventListener("click", open);
 
-// escuta click: reação do usuário
   modal.addEventListener("click", (e) => {
     const t = e.target;
     if (t && t.dataset && t.dataset.close === "true") close();
   });
 
-// escuta keydown: reação do usuário
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && modal.classList.contains("is-open")) close();
   });
+
+  // ✅ menu "Experiência" abre o modal e rola até a experiência (se existir)
+  if (navXp) {
+    navXp.addEventListener("click", (e) => {
+      e.preventDefault();
+      open();
+
+      setTimeout(() => {
+        const alvo = modal.querySelector("#xpNoModal");
+        if (alvo) alvo.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 80);
+    });
+  }
 })();
+
 
 // bloco automático: roda ao carregar a página
 (function setupAccordionsSmooth() {
@@ -371,4 +419,98 @@ if (canvas && ctx) {
   type();
 })();
 
+// Materiais profissionais
+(function () {
+  const openBtn = document.getElementById("openMateriais");
+  const modal = document.getElementById("materiaisModal");
+  if (!openBtn || !modal) return;
+
+  function open(e) {
+    if (e) e.preventDefault(); // impede o #materiais de rolar a página
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    document.body.classList.add("isModalOpen"); // <-- ADD
+  }
+
+  function close() {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    document.body.classList.remove("isModalOpen"); // <-- ADD
+  }
+
+  openBtn.addEventListener("click", open);
+
+  modal.addEventListener("click", (e) => {
+    const t = e.target;
+    if (t && t.dataset && t.dataset.close === "true") close();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("is-open")) close();
+  });
+})();
+
+(() => {
+  const container = document.querySelector("#materiaisModal");
+  if (!container) return;
+
+  container.addEventListener("click", (e) => {
+    if (e.target.closest(".matAction")) return; // clicar em baixar não mexe no toggle
+
+    const top = e.target.closest(".matTop");
+    if (!top) return;
+
+    e.preventDefault();
+
+    const card = top.closest(".matCard");
+    if (!card) return;
+
+    const isOpen = card.classList.contains("isOpen");
+
+    container.querySelectorAll(".matCard.isOpen").forEach((c) => {
+      c.classList.remove("isOpen");
+      const t = c.querySelector(".matTop");
+      if (t) t.setAttribute("aria-expanded", "false");
+    });
+
+    if (!isOpen) {
+      card.classList.add("isOpen");
+      top.setAttribute("aria-expanded", "true");
+    }
+  });
+})();
+
+// bloco automático: Contato (modal)
+(function () {
+  const openBtn = document.getElementById("openContato");
+  const modal = document.getElementById("contatoModal");
+  if (!openBtn || !modal) return;
+
+  function open() {
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    document.body.classList.add("isModalOpen");
+  }
+
+  function close() {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    document.body.classList.remove("isModalOpen");
+  }
+
+  openBtn.addEventListener("click", open);
+
+  modal.addEventListener("click", (e) => {
+    const t = e.target;
+    if (t && t.dataset && t.dataset.close === "true") close();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("is-open")) close();
+  });
+})();
 
