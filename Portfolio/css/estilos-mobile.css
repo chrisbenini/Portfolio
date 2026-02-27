@@ -286,3 +286,29 @@ header, main, footer, section{
 
   .hero .talkDrive2__lane{ display: none; }
 }
+
+@media (max-width: 900px){
+  .hero, .topHero, .heroWrap, .topSection{   /* use o seletor real que você encontrar */
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+}
+
+/* MOBILE: manter o trilho visível no "Fale comigo" */
+@media (max-width: 900px){
+  .talkDrive2--callSmart .talkDrive2__lane{
+    display: flex;      /* ou block, depende do seu lane */
+    opacity: 1;
+    visibility: visible;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
+
+/* mobile: 1 coluna */
+@media (max-width: 900px){
+  .skillPanel[data-panel="langs"] .skillList--langs{
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-auto-flow: row;
+  }
+}
