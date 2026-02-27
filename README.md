@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=".Portfolio/recursos/recursos/assets/logo/Logo-c.png" width="160" alt="Logo">
+  <img src=".Portfolio/recursos/assets/logo/Logo-c.png" width="160" alt="Logo">
 </p>
 
 <h1 align="center">Christopher Benini — Portfolio</h1>
