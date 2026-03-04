@@ -1,11 +1,18 @@
-<div align="center">
-  <a href="https://portfolio-chrisbenini.netlify.app">
-    <img src="Portfolio/recursos/assets/logo/Logo-c.png" width="140" alt="Logo Christopher" />
-  </a>
-
-  <h1>Christopher Benini — Portfolio</h1>
-  <p>Interface moderna, responsiva e interativa com foco em experiência visual e organização técnica.</p>
-</div>
+<table>
+  <tr>
+    <td width="170" align="center">
+      <a href="https://portfolio-chrisbenini.netlify.app">
+        <img src="Portfolio/recursos/assets/logo/Logo-c.png" width="140" alt="Logo Christopher" />
+      </a>
+    </td>
+    <td>
+      <h1 style="margin:0;">Christopher Benini — Portfolio</h1>
+      <p style="margin:6px 0 0 0;">
+        Interface moderna, responsiva e interativa construída com foco em experiência visual e organização técnica.
+      </p>
+    </td>
+  </tr>
+</table>
 
 <p align="center">
   <img src="https://img.shields.io/badge/HTML5-Semantic-E34F26?style=for-the-badge&logo=html5&logoColor=white">
