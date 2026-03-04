@@ -1,18 +1,10 @@
 <div align="center">
-  <div style="display:flex; align-items:center; justify-content:space-between; width:100%;">
-        <div style="width:180px; text-align:left;">
-      <a href="https://portfolio-chrisbenini.netlify.app">
-        <img src="Portfolio/recursos/assets/logo/Logo-c.png" width="120" alt="Logo Christopher" />
-      </a>
-    </div>
-    <div style="flex:1; text-align:center;">
-      <h1 style="margin:0;">Christopher Benini — Portfolio</h1>
-      <p style="margin:6px 0 0 0;">
-        Interface moderna, responsiva e interativa com foco em experiência visual e organização técnica.
-      </p>
-    </div>
-    <div style="width:180px;"></div>
-  </div>
+  <a href="https://portfolio-chrisbenini.netlify.app">
+    <img src="Portfolio/recursos/assets/logo/Logo-c.png" width="140" alt="Logo Christopher" />
+  </a>
+
+  <h1>Christopher Benini — Portfolio</h1>
+  <p>Interface moderna, responsiva e interativa com foco em experiência visual e organização técnica.</p>
 </div>
 
 <p align="center">
