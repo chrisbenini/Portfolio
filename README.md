@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://portfolio-chrisbenini.netlify.app">
-    <img src="Portfolio/recursos/assets/logo/Logo-c.png" width="140" alt="Logo Christopher" />
+    <img src="Portfolio/recursos/assets/logo/Logo-c.png" width="160" alt="Logo Christopher" />
   </a>
 
   <h1>Christopher Benini — Portfolio</h1>
