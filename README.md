@@ -4,8 +4,6 @@
     <span> Christopher Benini — Portfolio</span>
 </h1>
 
-<h1 align="center">Christopher Benini — Portfolio</h1>
-
 <p align="center">
   Interface moderna, responsiva e interativa construída com foco em experiência visual e organização técnica.
 </p>
