@@ -13,6 +13,7 @@
   <a href="https://github.com/chrisbenini/Portfolio" target="_blank">
     <img src="https://img.shields.io/badge/REPOSITORY-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="Repository">
   </a>
+    <img src="https://img.shields.io/badge/Status-Production-00C853?style=for-the-badge">
 </p>
 
 <p align="center">
@@ -21,7 +22,6 @@
   <img src="https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
   <img src="https://img.shields.io/badge/Canvas-Animated-111827?style=for-the-badge">
   <img src="https://img.shields.io/badge/UI-Interactive-06B6D4?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Status-Production-00C853?style=for-the-badge">
 </p>
 
 ---
