@@ -1,27 +1,38 @@
 <p align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=240&color=0:020617,20:0f172a,45:1d4ed8,75:06b6d4,100:67e8f9&text=Christopher%20Benini%20%E2%80%94%20Portfolio&fontSize=36&fontColor=f8fafc&fontAlignY=38&desc=Modern%20Front-End%20%7C%20Interactive%20UI%20%7C%20Responsive%20Experience&descAlignY=60&descSize=18&descColor=e0f2fe&animation=twinkling" />
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=240&color=0:020617,20:0f172a,45:1d4ed8,75:06b6d4,100:67e8f9&section=header" />
 </p>
 
 <p align="center">
-  Projeto de <b>portfólio front-end</b> desenvolvido com foco em <b>identidade visual, interatividade, responsividade e organização técnica</b>, criando uma experiência moderna para apresentação de projetos e posicionamento profissional.
+  <a href="https://portfolio-chrisbenini.netlify.app">
+    <img src="Portfolio/recursos/assets/logo/Logo-c.png" width="170" alt="Logo Christopher Benini" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&pause=1100&color=00E5FF&center=true&vCenter=true&width=1100&lines=Christopher+Benini+%E2%80%94+Portfolio;Modern+Front-End+%7C+Interactive+UI+%7C+Responsive+Experience" alt="Typing SVG" />
+</p>
+
+<p align="center">
+  Projeto de portfólio front-end desenvolvido com foco em <b>identidade visual</b>, <b>interatividade</b>, <b>responsividade</b> e <b>organização técnica</b>, criando uma experiência moderna para apresentação de projetos e posicionamento profissional.
 </p>
 
 <p align="center">
   <a href="https://portfolio-chrisbenini.netlify.app" target="_blank">
-    <img src="https://img.shields.io/badge/LIVE%20PREVIEW-ONLINE-00C853?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Preview">
+    <img src="https://img.shields.io/badge/LIVE_PREVIEW-ONLINE-00C853?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Preview">
   </a>
   <a href="https://github.com/chrisbenini/Portfolio" target="_blank">
-    <img src="https://img.shields.io/badge/REPOSITORY-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="Repository">
+    <img src="https://img.shields.io/badge/REPOSITORY-GITHUB-181717?style=for-the-badge&logo=github&logoColor=white" alt="Repository">
   </a>
-    <img src="https://img.shields.io/badge/Status-Production-00C853?style=for-the-badge">
+  <img src="https://img.shields.io/badge/STATUS-IN_PRODUCTION-06B6D4?style=for-the-badge" alt="Status">
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/HTML5-Semantic-E34F26?style=for-the-badge&logo=html5&logoColor=white">
-  <img src="https://img.shields.io/badge/CSS3-Responsive-1572B6?style=for-the-badge&logo=css3&logoColor=white">
-  <img src="https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
-  <img src="https://img.shields.io/badge/Canvas-Animated-111827?style=for-the-badge">
-  <img src="https://img.shields.io/badge/UI-Interactive-06B6D4?style=for-the-badge">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+  <img src="https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript ES6">
+  <img src="https://img.shields.io/badge/Canvas_API-111827?style=for-the-badge" alt="Canvas API">
+  <img src="https://img.shields.io/badge/Responsive_UI-0EA5E9?style=for-the-badge" alt="Responsive UI">
+  <img src="https://img.shields.io/badge/Custom_Animations-7C3AED?style=for-the-badge" alt="Custom Animations">
 </p>
 
 ---
@@ -47,7 +58,7 @@ O resultado é uma experiência voltada tanto para **recrutadores** quanto para 
 
 <p align="center">
   <a href="https://portfolio-chrisbenini.netlify.app" target="_blank">
-    <img src="https://img.shields.io/badge/ACCESS%20PORTFOLIO-CLICK%20HERE-00C853?style=for-the-badge&logo=googlechrome&logoColor=white">
+    <img src="https://img.shields.io/badge/ACCESS_PORTFOLIO-CLICK_HERE-00C853?style=for-the-badge&logo=googlechrome&logoColor=white">
   </a>
 </p>
 
