@@ -3,16 +3,6 @@
 </p>
 
 <p align="center">
-  <a href="https://portfolio-chrisbenini.netlify.app">
-    <img src="Portfolio/recursos/assets/logo/Logo-c.png" width="180" alt="Logo Christopher Benini" />
-  </a>
-</p>
-
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1000&color=00E5FF&center=true&vCenter=true&width=1100&lines=Modern+Front-End+Portfolio;Responsive+UI+%7C+Interactive+Experience+%7C+Custom+Animations;HTML+%7C+CSS+%7C+JavaScript+%7C+Canvas+API;Built+to+show+projects+with+identity%2C+performance+and+visual+impact" alt="Typing SVG" />
-</p>
-
-<p align="center">
   Projeto de <b>portfólio front-end</b> desenvolvido com foco em <b>identidade visual, interatividade, responsividade e organização técnica</b>, criando uma experiência moderna para apresentação de projetos e posicionamento profissional.
 </p>
 
@@ -234,16 +224,6 @@ Algumas evoluções possíveis para versões futuras:
 - refatoração para framework front-end
 - animações mais avançadas com biblioteca dedicada
 - painel administrativo para atualização de projetos
-
----
-
-## `> live_access`
-
-<p align="center">
-  <a href="https://portfolio-chrisbenini.netlify.app" target="_blank">
-    <img src="https://img.shields.io/badge/OPEN%20PROJECT-NOW-00C853?style=for-the-badge&logo=vercel&logoColor=white">
-  </a>
-</p>
 
 ---
 
