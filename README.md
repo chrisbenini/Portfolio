@@ -21,11 +21,11 @@
 ## `> tools_used`
 
 <p align="center">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
-  <img src="https://img.shields.io/badge/JavaScript_ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript ES6">
-  <img src="https://img.shields.io/badge/Canvas_API-111827?style=for-the-badge" alt="Canvas API">
-  <img src="https://img.shields.io/badge/Interactive_UI-06B6D4?style=for-the-badge" alt="Interactive UI">
+  <img src="https://img.shields.io/badge/HTML5-Semantic-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/CSS3-Responsive-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img src="https://img.shields.io/badge/Canvas-Animated-111827?style=for-the-badge">
+  <img src="https://img.shields.io/badge/UI-Interactive-06B6D4?style=for-the-badge">
 </p>
 
 ---
