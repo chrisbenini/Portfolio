@@ -2,8 +2,6 @@
 
   const PROJETOS = [
 
-    const PROJETOS = [
-
     {
       id: "oficina-database",
       titulo: "Oficina SQL Database",
