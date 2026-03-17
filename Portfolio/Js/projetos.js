@@ -2,11 +2,24 @@
 
   const PROJETOS = [
 
+    const PROJETOS = [
+
+    {
+      id: "oficina-database",
+      titulo: "Oficina SQL Database",
+      categoria: "dados",
+      badge: "Banco de dados",
+      desc: "Projeto de banco de dados relacional para oficina mecânica com modelagem lógica, estrutura de ordens de serviço, clientes, veículos, equipes, peças, serviços e pagamentos.", 
+      stack: ["MySQL", "SQL", "Modelagem", "Workbench", "Git"],
+      bullets: ["Modelagem relacional completa", "Scripts SQL e consultas analíticas", "Estrutura inspirada em cenário real"],
+      github: "https://github.com/chrisbenini/Oficina-sql-database"
+    },
+
     {
       id: "ecommerce-database",
       titulo: "E-commerce SQL Database",
       categoria: "dados",
-      badge: "Dados",
+      badge: "Banco de dados",
       desc: "Projeto de banco de dados relacional para e-commerce com modelagem lógica, estrutura de marketplace e consultas SQL para análise de pedidos, clientes, produtos, estoque e faturamento.", 
       stack: ["MySQL", "SQL", "Modelagem", "Workbench", "Git"],
       bullets: ["Modelagem relacional completa","Consultas analíticas em SQL","Estrutura de e-commerce real"],
@@ -47,7 +60,7 @@
       id: "margin-simulator",
       titulo: " Marketplace Margin Simulator",
       categoria: "dados",
-      badge: "Dados",
+      badge: "Excel",
       desc: "Simulador para cálculos de preços automatizados, e análises de rentabilidade por produto.", 
       stack: ["Excel", "VBA", "Análise", "SQL", "Fórmulas"],
       bullets: ["Controle de margem", "Apoio ao time de negócio", "Controle de lucros"],
@@ -57,7 +70,7 @@
       id: "social-grafos",
       titulo: "Dados de Redes sociais",
       categoria: "dados",
-      badge: "Dados",
+      badge: "Grafos",
       desc: "Projeto de análise de interações sociais utilizando modelo de grafos.",
       stack: ["Neoj4", "Modelagem de Dados", "Script", "Cypher"],
       bullets: ["Identificação de usuários influentes", "Detecção de comunidades por hashtags", "Análise de interações"],
@@ -67,7 +80,7 @@
       id: "dio-graph",
       titulo: "Dio graph",
       categoria: "dados",
-      badge: "Dados",
+      badge: "Grafos",
       desc: "Projeto simples de grafo de conhecimento usando Neo4j e Cypher.",
       stack: ["Neoj4", "Modelagem de Dados", "Script", "Cypher"],
       bullets: ["Grafo de conhecimento em Neo4j", "Relacionamentos entre entidades", "Exploração via Cypher"],
@@ -77,7 +90,7 @@
       id: "recomendacao",
       titulo: "Recomendação Inteligente de Músicas",
       categoria: "dados",
-      badge: "Dados",
+      badge: "Grafos",
       desc: "Sistema de Recomendação de Música com Neo4j.", 
       stack: ["Neoj4", "Modelagem de Dados", "Script", "Cypher"],
       bullets: ["Sistema de recomendação baseado em dados", "Matching entre usuários com gostos semelhantes", "Geração de recomendações por gênero e afinidade"],
