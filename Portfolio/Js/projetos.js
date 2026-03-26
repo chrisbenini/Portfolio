@@ -1,6 +1,16 @@
   // projetos.js: scripts da página (interações e efeitos)
 
   const PROJETOS = [
+    {
+      id: "dashboard-bi",
+      titulo: "Dashboard de Lucro e Desempenho Comercial",
+      categoria: "dados",
+      badge: "Power BI",
+      desc: "Dashboard analítico desenvolvido em Power BI com foco em lucro, vendas, custos e desempenho comercial, unindo visual estratégico, navegação interativa e apresentação profissional para portfólio.", 
+      stack: ["Power BI", "DAX", "Data Visualization", "Dashboard Design", "Git"],
+      bullets: ["KPIs de vendas, lucro, custos e unidades vendidas","Análises por país, segmento e filtros dinâmicos","Layout autoral com navegação interativa"],
+      github: "https://github.com/chrisbenini/dashboard-desempenho-financeiro"
+    },
 
     {
       id: "oficina-database",
