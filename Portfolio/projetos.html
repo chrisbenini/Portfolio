@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!--Logo Topo da aba-->
+
+  <!-- Logo Topo da aba -->
     <link rel="icon" type="image/png" sizes="32x32" href="../recursos/assets/logo/Logo-32.png?v=1">
     <link rel="icon" type="image/png" sizes="16x16" href="../recursos/assets/logo/Logo-16.png?v=1">
     <link rel="apple-touch-icon" sizes="180x180" href="../recursos/assets/logo/Logo-icon.png?v=1">
@@ -12,11 +13,8 @@
   <link rel="stylesheet" href="../css/estilos.css" />
   <link rel="stylesheet" href="../css/estilos-mobile.css" media="(max-width: 900px)" />
 </head>
-
 <body class="page page-projetos">
   
-  <!-- fundo animado (canvas) -->
-<canvas id="bg" aria-hidden="true"></canvas>
   <!-- fundo animado (canvas) -->
 <canvas id="bgNet" aria-hidden="true"></canvas>
   
@@ -38,6 +36,7 @@
 
   <!-- topo mobile: nome + botão ☰ + menu dropdown -->
 <div class="topMobile" role="banner">
+
   <!-- topo mobile: nome + botão ☰ + menu dropdown -->
   <div class="topMobile__inner">
     <div class="brand brandTech">
@@ -56,14 +55,14 @@
 
   <!-- conteúdo principal -->
    <main class="pageMain">
+
     <!-- seção de projetos -->
   <section class="proj" id="projetos">
-
 
       <header class="projTop">
         <div class="projTitleWrap">
           <h1 class="titleTech"><span>Projetos</span></h1>
-          <p class="projSub">Alguns projetos que mostram meu perfil:</p>
+          <p class="projSub"><b>Alguns projetos que mostram meu perfil:</b></p>
         </div>
 
         <div class="projActions">
@@ -88,74 +87,77 @@
         <article class="projModalCard" role="dialog" aria-modal="true" aria-label="Detalhes do projeto">
           <button class="projModalClose" type="button" data-close="true" aria-label="Fechar">✕</button>
 
+          <!-- Chaves -->
           <div class="projModalHead">
             <p class="projModalTag" id="mTag">Categoria</p>
             <h2 class="projModalTitle" id="mTitle">Título</h2>
             <p class="projModalDesc" id="mDesc">Descrição</p>
           </div>
-
           <div class="projModalBody">
             <div class="projModalSplit">
 
-    <!-- seção de projetos -->
-              <section class="projModalCol projModalCol--stacks">
-                <p class="projMetaLabel">Stacks:</p>
-                <div class="projPills" id="mStack"></div>
-              </section>
+    <!-- seção de projetos título -->
+    <section class="projModalCol projModalCol--stacks">
+      <p class="projMetaLabel">Stacks:</p>
+      <div class="projPills" id="mStack"></div>
+    </section>
+    <div class="projTechLine" aria-hidden="true"></div>
 
-              <div class="projTechLine" aria-hidden="true"></div>
+    <!-- seção de projetos título -->
+    <section class="projModalCol projModalCol--bullets">
+      <p class="projMetaLabel">O que faz:</p>
+      <ul class="projBullets" id="mBullets"></ul>
+    </section>
+  </div>
+</div>          
 
-    <!-- seção de projetos -->
-              <section class="projModalCol projModalCol--bullets">
-                <p class="projMetaLabel">O que faz:</p>
-                <ul class="projBullets" id="mBullets"></ul>
-              </section>
-
-            </div>
-          </div>
-
-          <div class="projModalBtns">
-            <a class="btnNeo" id="mGithub" href="#" target="_blank" rel="noreferrer">
-              <span>Ir para o projeto</span>
-              <span class="btnArrow" aria-hidden="true">↗</span>
-            </a>
-          </div>
-
-        </article>
-      </div>
-
-
+    <!-- Botão "ir para projeto" -->
+    <div class="projModalBtns">
+      <a class="btnNeo" id="mGithub" href="#" target="_blank" rel="noreferrer">
+        <span>Ir para o projeto</span>
+        <span class="btnArrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </article>
+</div>
   </section>
 </main>
 
-  <!-- rodapé -->
+  <!-- Rodapé -->
   <footer class="footer">
     <div class="container footerInner">
       <div class="homeFooter__left">© 2026 Christopher Benini</div>
       <div class="homeFooter__mid">
         
+   <!-- Redes Sociais - Linkedin -->     
   <a class="iconBtn is-in" href="https://www.linkedin.com/in/christopher-benini-081b7833a/" target="_blank" rel="noreferrer" title="LinkedIn" aria-label="LinkedIn">
     <img class="iconImg" src="recursos/assets/icones/linkedin/Linkedin_sc_512.png" alt="" aria-hidden="true">
   </a>
 
+  <!-- Redes Sociais GitHub -->
   <a class="iconBtn is-gh" href="https://github.com/chrisbenini" target="_blank" rel="noreferrer" title="GitHub" aria-label="GitHub">
     <img class="iconImg" src="recursos/assets/icones/github/Git_sc_512.png" alt="" aria-hidden="true">
   </a>
 
+  <!-- Redes Sociais Instagram -->
   <a class="iconBtn is-ig" href="https://www.instagram.com/chrisferruge/" target="_blank" rel="noreferrer" title="Instagram" aria-label="Instagram">
     <img class="iconImg" src="recursos/assets/icones/instagram/Insta_sc_512.png" alt="" aria-hidden="true">
   </a>
 </div>
 
+      <!-- Tags do rodapé -->
       <div class="homeFooter__right">HTML • CSS • JS</div>
     </div>
   </footer>
 
-  <!-- scripts da página -->
+  <!-- Puxando Funcionalidades do script rede-home -->
 <script src="../js/rede-home.js"></script>
-  <!-- scripts da página -->
+
+  <!-- Puxando Funcionalidades do scrip menu-mobile -->
 <script src="../js/menu-mobile.js"></script>
-  <!-- scripts da página -->
+
+  <!-- Puxando Funcionalidades do script projetos -->
 <script src="../js/projetos.js"></script>
+
 </body>
 </html>

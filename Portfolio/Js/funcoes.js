@@ -308,7 +308,7 @@ function close() {
     if (e.key === "Escape" && modal.classList.contains("is-open")) close();
   });
 
-  // ✅ menu "Experiência" abre o modal e rola até a experiência (se existir)
+  // Menu "Experiência" abre o modal e rola até a experiência (se existir)
   if (navXp) {
     navXp.addEventListener("click", (e) => {
       e.preventDefault();
